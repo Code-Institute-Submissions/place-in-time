@@ -30,7 +30,7 @@
 
 function initMap() {
     
-
+    // Generate some locations for testing
     var locations = [
         { lat: 52.017949, lng:  -9.493964 },
         { lat: 45.868655, lng: 6.185286 },
@@ -42,21 +42,9 @@ function initMap() {
     // Select random location from array
     var location = locations[Math.floor(Math.random() * locations.length)];
 
-    console.log(location);
-
+    // Render map centered at location selected above 
     var map = new google.maps.Map(document.getElementById("map"), {
         center: location,
         zoom: 16
     });
-
-    // var markers = locations.map(function (location, i) {
-    //     return new google.maps.Marker({
-    //         position: location,
-    //         label: labels[i % labels.length]
-    //     });
-    // });
-
-    // var markerCluster = new MarkerClusterer(map, markers,
-    //     { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
-
 }
