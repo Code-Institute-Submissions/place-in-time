@@ -1,7 +1,7 @@
 .logo {
-    margin-top: 50px;
+    margin: 50px 0;
 }
 
 div#map {
-    min-height: 360px;
+    min-height: 540px;
 }
