@@ -28,6 +28,9 @@
 
 // }
 
+var latLoc4;
+var lngLoc4;
+
 function initMap() {
     
     // Generate some locations for testing
@@ -41,6 +44,9 @@ function initMap() {
 
     // Select random location from array
     var location = locations[Math.floor(Math.random() * locations.length)];
+    latLoc4 = parseFloat(location.lat.toFixed(4));
+    lngLoc4 = parseFloat(location.lng.toFixed(4));
+    console.log(latLoc4);
 
     // Render map centered at location selected above 
     var map = new google.maps.Map(document.getElementById("map"), {
