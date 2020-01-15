@@ -1,5 +1,5 @@
 // function initMap() {
-    
+
 //     var map = new google.maps.Map(document.getElementById("map"), {
 //         zoom: 3,
 //         center: {
@@ -28,29 +28,31 @@
 
 // }
 
+// Declare global variables
 var latLoc4;
 var lngLoc4;
 
+// Generate some locations for testing
+var locations = [
+    { lat: 52.017949, lng: -9.493964 },
+    { lat: 45.868655, lng: 6.185286 },
+    { lat: -4.439318, lng: 15.258601 },
+    { lat: 42.972104, lng: -71.696054 },
+    { lat: 43.146907, lng: 131.996560 }
+];
+
+// Select random location from array
+var randLoc = locations[Math.floor(Math.random() * locations.length)];
+
+// Truncate coordinates for reverse geocode useage
+latLoc4 = parseFloat(randLoc.lat.toFixed(4));
+lngLoc4 = parseFloat(randLoc.lng.toFixed(4));
+console.log(latLoc4);
+
 function initMap() {
-    
-    // Generate some locations for testing
-    var locations = [
-        { lat: 52.017949, lng:  -9.493964 },
-        { lat: 45.868655, lng: 6.185286 },
-        { lat: -4.439318, lng: 15.258601 },
-        { lat: 42.972104, lng: -71.696054},
-        { lat: 43.146907,lng: 131.996560}
-     ];
-
-    // Select random location from array
-    var location = locations[Math.floor(Math.random() * locations.length)];
-    latLoc4 = parseFloat(location.lat.toFixed(4));
-    lngLoc4 = parseFloat(location.lng.toFixed(4));
-    console.log(latLoc4);
-
-    // Render map centered at location selected above 
+    // Render map centered at random location from test array 
     var map = new google.maps.Map(document.getElementById("map"), {
-        center: location,
+        center: randLoc,
         zoom: 16
     });
 }
