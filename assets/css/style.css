@@ -1,8 +1,22 @@
+body {
+    background-color: #d1d1d1;
+}
+
+.slate {
+     color: #464646;
+}
+
 .logo {
     margin: 50px 0;
-    color: #464646;
+    font-weight: 300;
 }
 
 div#map {
     min-height: 540px;
+    margin-bottom: 50px;
+}
+
+span#selected-loc {
+    color: #000;
+    font-weight: 300;
 }

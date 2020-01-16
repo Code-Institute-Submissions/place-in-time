@@ -15,7 +15,7 @@ document.getElementById("get-locat-btn").onclick = function () {
         longitude: lngLoc4,
     },function(result) {
         var sigPlace = result.locality;
-        console.log(result);
+        // console.log(result);
         console.log(sigPlace);
     });
 

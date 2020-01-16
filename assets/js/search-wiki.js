@@ -7,7 +7,10 @@
     MIT License
 */
 
-// Prepare google coordinates for wikipedia
+var pageId;
+var pageTitle;
+
+// Prepare google coordinates to fit geosearch params
 var gscoordLabel = `${randLoc.lat}0|${randLoc.lng}0`;
 
 var url = "https://en.wikipedia.org/w/api.php"; 
@@ -29,9 +32,15 @@ fetch(url)
     .then(function(response){return response.json();})
     .then(function(response) {
         var pages = response.query.geosearch;
-        document.getElementById("selected-loc").innerHTML = pages[0].title;
         for (var place in pages) {
             console.log(pages[place].title);
         }
+        pageId = pages[0].pageid;
+        pageTitle = pages[0].title;
+        document.getElementById("selected-loc").innerHTML = pageTitle;
+        console.log("Page Id of closest entry: " + pageId);
+        console.log("Title of current location: " + pageTitle);
     })
+    .then(parseContents)
     .catch(function(error){console.log(error);});
+

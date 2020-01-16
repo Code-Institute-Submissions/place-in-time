@@ -56,8 +56,9 @@ latLoc4 = parseFloat(randLoc.lat.toFixed(4));
 lngLoc4 = parseFloat(randLoc.lng.toFixed(4));
 console.log(latLoc4);
 
+
+// Render map centered at random location from test array 
 function initMap() {
-    // Render map centered at random location from test array 
     var map = new google.maps.Map(document.getElementById("map"), {
         center: randLoc,
         zoom: 16
