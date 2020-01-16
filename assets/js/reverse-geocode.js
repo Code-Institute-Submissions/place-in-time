@@ -5,9 +5,9 @@ document.getElementById("get-locat-btn").onclick = function () {
     
     /* Get the current user's location information, based on the coordinates provided by their browser */
     /* Fetching coordinates requires the user to be accessing your page over HTTPS and to allow the location prompt. */
-    reverseGeocoder.getClientLocation(function(result) {
-        // console.log(result);
-    });
+    // reverseGeocoder.getClientLocation(function(result) {
+    //     console.log(result);
+    // });
 
     /* Get the administrative location information using a set of known coordinates */
     reverseGeocoder.getClientLocation({

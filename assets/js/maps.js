@@ -31,6 +31,7 @@
 // Declare global variables
 var latLoc4;
 var lngLoc4;
+var sigPlace;
 
 // Generate some locations for testing
 var locations = [

@@ -7,6 +7,7 @@
     MIT License
 */
 
+// Prepare google coordinates for wikipedia
 var gscoordLabel = `${randLoc.lat}0|${randLoc.lng}0`;
 
 var url = "https://en.wikipedia.org/w/api.php"; 
@@ -28,6 +29,7 @@ fetch(url)
     .then(function(response){return response.json();})
     .then(function(response) {
         var pages = response.query.geosearch;
+        document.getElementById("selected-loc").innerHTML = pages[0].title;
         for (var place in pages) {
             console.log(pages[place].title);
         }
