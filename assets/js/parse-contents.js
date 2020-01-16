@@ -24,7 +24,10 @@ fetch(url)
     .then(function(response) {
         // console.log("Page title before parse: " + pageTitle);
         console.log("URL before parsing: " + url);
-        console.log(response.parse.text["*"]);
+        var parsedText = response.parse.text["*"];
+        console.log(parsedText);
+        // var firstPar = parsedJSON.getElementByTagName('p')[0].innerHTML;
+        // console.log(firstPar);
     })
     .catch(function(error){console.log(error);});
 }

@@ -37,11 +37,17 @@ fetch(url)
         }
         pageId = pages[0].pageid;
         pageTitle = pages[0].title;
+
+        // Replace spaces with underscores for URL query
         pageTitleU = pageTitle.replace(/ /g,"_");
+
+        // Insert closest wikipedia entry location to page contents
         document.getElementById("selected-loc").innerHTML = pageTitle;
-        console.log("Page Id of closest entry: " + pageId);
+
+        // console.log("Page Id of closest entry: " + pageId);
         console.log("Title of current location: " + pageTitleU);
     })
+    // Call parseContents after getting name of wikipedia page
     .then(parseContents)
     .catch(function(error){console.log(error);});
 
