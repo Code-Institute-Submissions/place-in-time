@@ -12,7 +12,7 @@ var url = "https://en.wikipedia.org/w/api.php";
 
 var params = {
     action: "parse",
-    page: pageTitle,
+    page: pageTitleU,
     format: "json"
 };
 
@@ -22,7 +22,8 @@ Object.keys(params).forEach(function(key){url += "&" + key + "=" + params[key];}
 fetch(url)
     .then(function(response){return response.json();})
     .then(function(response) {
-        console.log("Page title before parse: " + pageTitle);
+        // console.log("Page title before parse: " + pageTitle);
+        console.log("URL before parsing: " + url);
         console.log(response.parse.text["*"]);
     })
     .catch(function(error){console.log(error);});

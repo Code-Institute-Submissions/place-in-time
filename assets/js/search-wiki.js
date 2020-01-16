@@ -37,9 +37,10 @@ fetch(url)
         }
         pageId = pages[0].pageid;
         pageTitle = pages[0].title;
+        pageTitleU = pageTitle.replace(/ /g,"_");
         document.getElementById("selected-loc").innerHTML = pageTitle;
         console.log("Page Id of closest entry: " + pageId);
-        console.log("Title of current location: " + pageTitle);
+        console.log("Title of current location: " + pageTitleU);
     })
     .then(parseContents)
     .catch(function(error){console.log(error);});
