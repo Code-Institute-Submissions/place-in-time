@@ -12,7 +12,7 @@ body {
 }
 
 div#map {
-    min-height: 540px;
+    min-height: 360px;
     margin-bottom: 50px;
 }
 
