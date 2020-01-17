@@ -25,7 +25,17 @@ fetch(url)
         // console.log("Page title before parse: " + pageTitle);
         console.log("URL before parsing: " + url);
         var parsedText = response.parse.text["*"];
-        console.log(parsedText);
+        console.log("Type of parsedText: " + typeof(parsedText));
+
+        // Convert text to temp HTML for ease of manipulation
+        var tempEl = document.createElement("tempel");
+        tempEl.innerHTML = parsedText;
+        var historyHeading = document.getElementById("History");
+        console.log(historyHeading);
+        // var firstHPar = $("#History").parent().siblings().next("p");
+        // console.log(firstHPar);
+        console.log(tempEl);
+        // console.log(parsedText);
         // var firstPar = parsedJSON.getElementByTagName('p')[0].innerHTML;
         // console.log(firstPar);
     })

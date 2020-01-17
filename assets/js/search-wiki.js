@@ -48,8 +48,8 @@ fetch(url)
         console.log("Title of current location: " + pageTitleU);
     })
     // Call parseContents after getting name of wikipedia page
-    // .then(parseContents)
+    .then(parseContents)
     // .then(getExtracts)
-    .then(getSegments)
+    // .then(getSegments)
     .catch(function(error){console.log(error);});
 
