@@ -27,14 +27,18 @@ fetch(url)
         var parsedText = response.parse.text["*"];
         console.log("Type of parsedText: " + typeof(parsedText));
 
-        // Convert text to temp HTML for ease of manipulation
+        // Convert text to temp HTML for ease of parsing
         var tempEl = document.createElement("tempel");
         tempEl.innerHTML = parsedText;
-        var historyHeading = document.getElementById("History");
-        console.log(historyHeading);
-        // var firstHPar = $("#History").parent().siblings().next("p");
-        // console.log(firstHPar);
+        console.log("Type of tempEl: " + typeof(tempEl));
         console.log(tempEl);
+
+        // Insert contents of tempEl to DOM
+        document.getElementById("hidden-content").appendChild(tempEl);
+        var historyHeading = document.getElementById("History");
+        console.log("Contents of #History: " + historyHeading.innerHTML);
+        var firstHPar = $("#History").parent().siblings().next("p");
+        console.log("Contents of first History paragraph: " + firstHPar.html());
         // console.log(parsedText);
         // var firstPar = parsedJSON.getElementByTagName('p')[0].innerHTML;
         // console.log(firstPar);

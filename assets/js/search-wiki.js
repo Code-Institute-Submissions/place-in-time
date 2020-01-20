@@ -50,6 +50,6 @@ fetch(url)
     // Call parseContents after getting name of wikipedia page
     .then(parseContents)
     // .then(getExtracts)
-    // .then(getSegments)
+    // .then(getSummary)
     .catch(function(error){console.log(error);});
 
