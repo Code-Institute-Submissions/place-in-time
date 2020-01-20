@@ -27,15 +27,16 @@ fetch(url)
         var parsedText = response.parse.text["*"];
         console.log("Type of parsedText: " + typeof(parsedText));
 
-        // Convert text to temp HTML for ease of parsing
+        // Convert text to temporary HTML element for ease of traversing
         var tempEl = document.createElement("tempel");
         tempEl.innerHTML = parsedText;
         console.log("Type of tempEl: " + typeof(tempEl));
         console.log(tempEl);
 
-        // Insert contents of tempEl to DOM
+        // Insert contents of temporary element to DOM
         document.getElementById("hidden-content").appendChild(tempEl);
         var historyHeading = document.getElementById("History");
+        if (!historyHeading) {document.getElementById("history-header").innerHTML="Extra historical information is not available for this location";}
         console.log("Contents of #History: " + historyHeading.innerHTML);
 
         // Target first paragraph of history section
@@ -48,7 +49,7 @@ fetch(url)
 
         // Remove citation markers from resulting text
         document.body.innerHTML = document.body.innerHTML.replace(/<sup\b[^>]*>(.*?)<\/sup>/gi, "");
-        
+
         // console.log(parsedText);
         // var firstPar = parsedJSON.getElementByTagName('p')[0].innerHTML;
         // console.log(firstPar);
