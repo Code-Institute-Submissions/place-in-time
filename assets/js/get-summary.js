@@ -14,9 +14,9 @@ function getSummary() {
         // fetch(url)
         .then(function (response) { return response.json(); })
         .then(function (response) {
-            console.log("Page title before extracting: " + pageTitle);
-            console.log("URL before extracting: " + url);
-            console.log(response.extract);
+            // console.log("Page title before extracting: " + pageTitle);
+            // console.log("URL before extracting: " + url);
+            // console.log(response.extract);
             var extractMainPar = response.extract;
             document.getElementById("extract-main-par").innerHTML = extractMainPar;
             // console.log("Type of pages: " + typeof(response.query.pages));

@@ -30,13 +30,13 @@ fetch(url)
         // Convert text to temporary HTML element for ease of traversing
         var tempEl = document.createElement("tempel");
         tempEl.innerHTML = parsedText;
-        console.log("Type of tempEl: " + typeof(tempEl));
+        // console.log("Type of tempEl: " + typeof(tempEl));
         console.log(tempEl);
 
         // Insert contents of temporary element to DOM
         document.getElementById("hidden-content").appendChild(tempEl);
         var historyHeading = document.getElementById("History");
-        if (!historyHeading) {document.getElementById("history-header").innerHTML="Extra historical information is not available for this location";}
+        !historyHeading ? document.getElementById("history-header").innerHTML="Extra historical information is not available for this location." : historyHeading.innerHTML="";
         console.log("Contents of #History: " + historyHeading.innerHTML);
 
         // Target first paragraph of history section
