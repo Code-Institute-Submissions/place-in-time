@@ -37,8 +37,18 @@ fetch(url)
         document.getElementById("hidden-content").appendChild(tempEl);
         var historyHeading = document.getElementById("History");
         console.log("Contents of #History: " + historyHeading.innerHTML);
-        var firstHPar = $("#History").parent().siblings().next("p");
-        console.log("Contents of first History paragraph: " + firstHPar.html());
+
+        // Target first paragraph of history section
+        var firstHPar = $("#History").closest("h2").nextUntil("h2", "p");
+
+        // Remove anchor tags and display links as text only
+        firstHPar.find("a").replaceWith(function() { return this.childNodes; });
+        console.log("Contents of first History paragraph: " + firstHPar);
+        document.getElementById("history-pars").innerHTML = firstHPar.html();
+
+        // Remove citation markers from resulting text
+        document.body.innerHTML = document.body.innerHTML.replace(/<sup\b[^>]*>(.*?)<\/sup>/gi, "");
+        
         // console.log(parsedText);
         // var firstPar = parsedJSON.getElementByTagName('p')[0].innerHTML;
         // console.log(firstPar);
