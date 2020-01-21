@@ -45,8 +45,10 @@ fetch(url)
         
         // Remove anchor tags and display embedded links as text only
         if (firstHPar.length>0) {firstHPar.find("a").replaceWith(function() { return this.childNodes; })
-                                document.getElementById("history-pars").innerHTML = firstHPar.html(); };
-        console.log("Contents of first History paragraph: " + firstHPar);
+                                document.getElementById("history-pars").innerHTML = firstHPar.html(); 
+                                console.log("Contents of first History paragraph: " + firstHPar);
+                                };
+        
         
 
         // Remove citation markers from resulting text

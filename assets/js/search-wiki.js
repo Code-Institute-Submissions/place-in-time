@@ -34,11 +34,14 @@ fetch(url)
         var pages = response.query.geosearch;
         for (var place in pages) {
             var latLocW = pages[place].lat;
+            latLocW = parseFloat(latLocW.toFixed(6));
             var lngLocW = pages[place].lon;
+            lngLocW = parseFloat(lngLocW.toFixed(6));
             var locObjW = { lat: latLocW, lng: lngLocW };
             wikiLocations.push(locObjW);
+            wikiTitles.push(pages[place].title);
             // console.log(pages[place].title);
-            console.log(pages[place]);
+            // console.log(pages[place]);
         }
         pageId = pages[0].pageid;
         pageTitle = pages[0].title;

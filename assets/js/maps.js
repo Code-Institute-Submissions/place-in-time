@@ -28,10 +28,17 @@
 
 // }
 
+
+window.onload = initMap;
+
 // Declare global variables
 var latLoc4;
 var lngLoc4;
 var sigPlace;
+
+// 10 closest locations with wikipedia pages
+var wikiLocations = [];
+var wikiTitles = [];
 
 // Generate some locations for testing
 var locations = [
@@ -47,9 +54,6 @@ var locations = [
     { lat: 55.674432, lng: 12.573062 },
     { lat: 59.933969, lng: 30.338195 }
 ];
-
-// 10 closest locations with wikipedia pages
-var wikiLocations = [];
 
 // Select random location from array
 var randLoc = locations[Math.floor(Math.random() * locations.length)];
@@ -69,12 +73,18 @@ function initMap() {
 
     var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
+    console.log(wikiLocations);
+    console.log(locations);
+
     var markers = wikiLocations.map(function (location, i) {
         return new google.maps.Marker({
             position: location,
-            label: labels[i % labels.length]
+            label: labels[i % labels.length],
+            title: wikiTitles[i]
         });
     });
+
+    console.log(wikiLocations);
 
     var markerCluster = new MarkerClusterer(map, markers,
         { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
