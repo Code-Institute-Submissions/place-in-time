@@ -23,15 +23,15 @@ fetch(url)
     .then(function(response){return response.json();})
     .then(function(response) {
         // console.log("Page title before parse: " + pageTitle);
-        console.log("URL before parsing: " + url);
+        // console.log("URL before parsing: " + url);
         var parsedText = response.parse.text["*"];
-        console.log("Type of parsedText: " + typeof(parsedText));
+        // console.log("Type of parsedText: " + typeof(parsedText));
 
         // Convert text to temporary HTML element for ease of traversing
         var tempEl = document.createElement("tempel");
         tempEl.innerHTML = parsedText;
         // console.log("Type of tempEl: " + typeof(tempEl));
-        console.log(tempEl);
+        // console.log(tempEl);
 
         // Insert contents of temporary element to DOM
         document.getElementById("hidden-content").appendChild(tempEl);
@@ -46,7 +46,7 @@ fetch(url)
         // Remove anchor tags and display embedded links as text only
         if (firstHPar.length>0) {firstHPar.find("a").replaceWith(function() { return this.childNodes; })
                                 document.getElementById("history-pars").innerHTML = firstHPar.html(); 
-                                console.log("Contents of first History paragraph: " + firstHPar);
+                                // console.log("Contents of first History paragraph: " + firstHPar);
                                 };
         
         

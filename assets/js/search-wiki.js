@@ -34,9 +34,9 @@ fetch(url)
         var pages = response.query.geosearch;
         for (var place in pages) {
             var latLocW = pages[place].lat;
-            latLocW = parseFloat(latLocW.toFixed(6));
+            // latLocW = parseFloat(latLocW.toFixed(6));
             var lngLocW = pages[place].lon;
-            lngLocW = parseFloat(lngLocW.toFixed(6));
+            // lngLocW = parseFloat(lngLocW.toFixed(6));
             var locObjW = { lat: latLocW, lng: lngLocW };
             wikiLocations.push(locObjW);
             wikiTitles.push(pages[place].title);
@@ -53,7 +53,7 @@ fetch(url)
         document.getElementById("selected-loc").innerHTML = pageTitle;
 
         // console.log("Page Id of closest entry: " + pageId);
-        console.log("Title of current location: " + pageTitleU);
+        // console.log("Title of current location: " + pageTitleU);
     })
     // Call parseContents after getting name of wikipedia page
     

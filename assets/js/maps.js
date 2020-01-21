@@ -28,7 +28,6 @@
 
 // }
 
-
 window.onload = initMap;
 
 // Declare global variables
@@ -61,8 +60,7 @@ var randLoc = locations[Math.floor(Math.random() * locations.length)];
 // Truncate coordinates for reverse geocode useage
 latLoc4 = parseFloat(randLoc.lat.toFixed(4));
 lngLoc4 = parseFloat(randLoc.lng.toFixed(4));
-console.log(latLoc4);
-
+// console.log(latLoc4);
 
 // Render map centered at random location from test array 
 function initMap() {
@@ -84,10 +82,9 @@ function initMap() {
         });
     });
 
-    console.log(wikiLocations);
+    // console.log(wikiLocations);
 
     var markerCluster = new MarkerClusterer(map, markers,
         { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
 
 }
-
