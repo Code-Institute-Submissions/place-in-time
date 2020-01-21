@@ -48,6 +48,9 @@ var locations = [
     { lat: 59.933969, lng: 30.338195 }
 ];
 
+// 10 closest locations with wikipedia pages
+var wikiLocations = []
+
 // Select random location from array
 var randLoc = locations[Math.floor(Math.random() * locations.length)];
 
@@ -63,4 +66,18 @@ function initMap() {
         center: randLoc,
         zoom: 16
     });
+
+    var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    var markers = wikiLocations.map(function (location, i) {
+        return new google.maps.Marker({
+            position: location,
+            label: labels[i % labels.length]
+        });
+    });
+
+    var markerCluster = new MarkerClusterer(map, markers,
+        { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
+
 }
+
