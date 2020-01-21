@@ -49,7 +49,7 @@ var locations = [
 ];
 
 // 10 closest locations with wikipedia pages
-var wikiLocations = []
+var wikiLocations = [];
 
 // Select random location from array
 var randLoc = locations[Math.floor(Math.random() * locations.length)];
@@ -63,8 +63,8 @@ console.log(latLoc4);
 // Render map centered at random location from test array 
 function initMap() {
     var map = new google.maps.Map(document.getElementById("map"), {
-        center: randLoc,
-        zoom: 16
+        zoom: 16,
+        center: randLoc
     });
 
     var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
