@@ -35,8 +35,9 @@ var latLoc4;
 var lngLoc4;
 var sigPlace;
 
-// 10 closest locations with wikipedia pages
+// 10 closest coordinates with wikipedia pages
 var wikiLocations = [];
+// Page titles associated with above array
 var wikiTitles = [];
 
 // Generate some locations for testing
@@ -81,6 +82,21 @@ function initMap() {
             title: wikiTitles[i]
         });
     });
+
+    console.log(markers);
+
+    markers.forEach(function(marker) {
+        marker.addListener("click", function() {
+            clickLat = marker.getPosition().lat();
+            clickLng = marker.getPosition().lng();
+            randLoc = { lat: clickLat, lng: clickLng }
+            console.log(randLoc);
+            initMap();
+            searchWiki(randLoc);
+        })
+    })
+
+    
 
     // console.log(wikiLocations);
 
