@@ -13,10 +13,13 @@ var pageTitle;
 
 
 function searchWiki(newLoc) {
+
+    if (!newLoc) {newLoc = randLoc;}
+
     var url = "https://en.wikipedia.org/w/api.php";
 
     // Prepare google coordinates for geosearch params
-    var newLoc = `${randLoc.lat}|${randLoc.lng}`;
+    var newLoc = `${newLoc.lat}|${newLoc.lng}`;
 
     var params = {
         action: "query",
@@ -35,6 +38,8 @@ function searchWiki(newLoc) {
         .then(function (response) { return response.json(); })
         .then(function (response) {
             var pages = response.query.geosearch;
+            wikiLocations = [];
+            wikiTitles = [];
             for (var place in pages) {
                 var latLocW = pages[place].lat;
                 // latLocW = parseFloat(latLocW.toFixed(6));

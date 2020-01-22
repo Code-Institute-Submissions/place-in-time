@@ -39,6 +39,7 @@ var sigPlace;
 var wikiLocations = [];
 // Page titles associated with above array
 var wikiTitles = [];
+var markers = [];
 
 // Generate some locations for testing
 var locations = [
@@ -65,6 +66,7 @@ lngLoc4 = parseFloat(randLoc.lng.toFixed(4));
 
 // Render map centered at random location from test array 
 function initMap() {
+
     var map = new google.maps.Map(document.getElementById("map"), {
         zoom: 16,
         center: randLoc
@@ -75,7 +77,13 @@ function initMap() {
     console.log(wikiLocations);
     console.log(locations);
 
-    var markers = wikiLocations.map(function (location, i) {
+    // markers.forEach(function(marker) {
+    //     marker.setMap(null);
+    // })
+
+    markers = [];
+
+    markers = wikiLocations.map(function (location, i) {
         return new google.maps.Marker({
             position: location,
             label: labels[i % labels.length],
@@ -85,18 +93,17 @@ function initMap() {
 
     console.log(markers);
 
-    markers.forEach(function(marker) {
-        marker.addListener("click", function() {
+    markers.forEach(function (marker) {
+        marker.addListener("click", function () {
             clickLat = marker.getPosition().lat();
             clickLng = marker.getPosition().lng();
-            randLoc = { lat: clickLat, lng: clickLng }
-            console.log(randLoc);
+            newLoc = { lat: clickLat, lng: clickLng }
+            console.log(newLoc);
+            randLoc = newLoc;
             initMap();
-            searchWiki(randLoc);
+            searchWiki(newLoc);
         })
     })
-
-    
 
     // console.log(wikiLocations);
 
