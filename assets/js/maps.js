@@ -97,11 +97,11 @@ function initMap() {
         marker.addListener("click", function () {
             clickLat = marker.getPosition().lat();
             clickLng = marker.getPosition().lng();
-            newLoc = { lat: clickLat, lng: clickLng }
-            console.log(newLoc);
-            randLoc = newLoc;
-            initMap();
-            searchWiki(newLoc);
+            clickLoc = { lat: clickLat, lng: clickLng }
+            console.log(clickLoc);
+            // randLoc = newLoc;
+            searchWiki(clickLoc);
+            // initMap();
         })
     })
 

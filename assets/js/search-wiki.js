@@ -12,20 +12,18 @@ var pageTitle;
 
 
 
-function searchWiki(newLoc) {
-
-    if (!newLoc) {newLoc = randLoc;}
+function searchWiki(clickLoc) {
 
     var url = "https://en.wikipedia.org/w/api.php";
 
     // Prepare google coordinates for geosearch params
-    var newLoc = `${newLoc.lat}|${newLoc.lng}`;
+    var clickLoc = `${clickLoc.lat}|${clickLoc.lng}`;
 
     var params = {
         action: "query",
         list: "geosearch",
         // gscoord: "37.7891838|-122.4033522",
-        gscoord: newLoc,
+        gscoord: clickLoc,
         gsradius: "10000",
         gslimit: "10",
         format: "json"
@@ -38,6 +36,8 @@ function searchWiki(newLoc) {
         .then(function (response) { return response.json(); })
         .then(function (response) {
             var pages = response.query.geosearch;
+
+            // Clear out arrays used for markers
             wikiLocations = [];
             wikiTitles = [];
             for (var place in pages) {
@@ -63,12 +63,10 @@ function searchWiki(newLoc) {
             // console.log("Page Id of closest entry: " + pageId);
             // console.log("Title of current location: " + pageTitleU);
         })
-        // Call parseContents after getting name of wikipedia page
-
         // .then(getExtracts)
         .then(getSummary)
         .then(parseContents)
         .catch(function (error) { console.log(error); });
 }
 
-searchWiki();
+searchWiki(randLoc);

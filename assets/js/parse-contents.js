@@ -8,55 +8,78 @@ function parseContents() {
     MIT License
 */
 
-var url = "https://en.wikipedia.org/w/api.php";
+    var url = "https://en.wikipedia.org/w/api.php";
 
-var params = {
-    action: "parse",
-    page: pageTitleU,
-    format: "json"
-};
+    var params = {
+        action: "parse",
+        page: pageTitleU,
+        format: "json"
+    };
 
-url = url + "?origin=*";
-Object.keys(params).forEach(function(key){url += "&" + key + "=" + params[key];});
-// console.log(url);
-fetch(url)
-    .then(function(response){return response.json();})
-    .then(function(response) {
-        // console.log("Page title before parse: " + pageTitle);
-        // console.log("URL before parsing: " + url);
-        var parsedText = response.parse.text["*"];
-        // console.log("Type of parsedText: " + typeof(parsedText));
+    url = url + "?origin=*";
+    Object.keys(params).forEach(function (key) { url += "&" + key + "=" + params[key]; });
+    // console.log(url);
 
-        // Convert text to temporary HTML element for ease of traversing
-        var tempEl = document.createElement("tempel");
-        tempEl.innerHTML = parsedText;
-        // console.log("Type of tempEl: " + typeof(tempEl));
-        // console.log(tempEl);
+    var docHistoryHeader = document.getElementById("history-header");
+    var docHistoryPars = document.getElementById("history-pars");
 
-        // Insert contents of temporary element to DOM
-        document.getElementById("hidden-content").appendChild(tempEl);
-        var historyHeading = document.getElementById("History");
-        if (!historyHeading) {document.getElementById("history-header").innerHTML="Extra historical information is not available for this location."};
-        // console.log("Contents of #History: " + historyHeading.innerHTML);
+    fetch(url)
+        .then(function (response) { return response.json(); })
+        .then(function (response) {
+            // console.log("Page title before parse: " + pageTitle);
+            // console.log("URL before parsing: " + url);
+            var parsedText = response.parse.text["*"];
+            // console.log("Type of parsedText: " + typeof(parsedText));
 
-        // Target first paragraph of history section
-        var firstHPar;
-        $("#History").length==0 ? firstHPar="" : firstHPar=$("#History").closest("h2").nextUntil("h2", "p");
-        
-        // Remove anchor tags and display embedded links as text only
-        if (firstHPar.length>0) {firstHPar.find("a").replaceWith(function() { return this.childNodes; })
-                                document.getElementById("history-pars").innerHTML = firstHPar.html(); 
-                                // console.log("Contents of first History paragraph: " + firstHPar);
-                                };
-        
-        
+            // Convert text to temporary HTML element for ease of traversing
+            var tempEl = document.createElement("tempel");
+            // tempEl.innerHTML = "";
+            tempEl.innerHTML = parsedText;
+            // console.log("Type of tempEl: " + typeof(tempEl));
+            // console.log(tempEl);
+            // docHistoryHeader.innerHTML = "";
+            // docHistoryPars.innerHTML = "";
 
-        // Remove citation markers from resulting text
-        document.getElementById("history-pars").innerHTML = document.getElementById("history-pars").innerHTML.replace(/<sup\b[^>]*>(.*?)<\/sup>/gi, "");
+            // Insert contents of temporary element to DOM
+            var docHiddenContent = document.getElementById("hidden-content");
+            docHiddenContent.appendChild(tempEl);
+            var hiddenHistHeading = document.getElementById("History");
+            // console.log(historyHeading);
 
-        // console.log(parsedText);
-        // var firstPar = parsedJSON.getElementByTagName('p')[0].innerHTML;
-        // console.log(firstPar);
-    })
-    .catch(function(error){console.log(error);});
+
+
+            if (!hiddenHistHeading) {
+                docHistoryHeader.innerHTML = "Extra historical information is not available for this location.";
+                docHistoryPars.innerHTML = "";
+            }
+
+            else if (hiddenHistHeading) {
+                docHistoryHeader.innerHTML = "History: ";
+                var histParObj = $("#History").closest("h2").nextUntil("h2", "p");
+                var parUnlink = histParObj.find("a").replaceWith(function () { return this.childNodes; });
+                console.log("History Paragraph Object: " + histParObj.html());
+                docHistoryPars.innerHTML = parUnlink.html();
+                // document.getElementById("history-pars").innerHTML = firstHPar.html();
+                docHistoryPars.innerHTML = docHistoryPars.innerHTML.replace(/<sup\b[^>]*>(.*?)<\/sup>/gi, "");
+                // document.getElementById("history-pars").innerHTML = document.getElementById("history-pars").innerHTML.replace(/<sup\b[^>]*>(.*?)<\/sup>/gi, "");
+            }
+
+            console.log("Contents of history pars: " + docHistoryPars.innerHTML);
+
+            // console.log("Contents of #History: " + historyHeading.innerHTML);
+
+            // Target first paragraph of history section
+
+            // !historyHeading ? firstHPar = firstHPar : 
+
+            // Remove anchor tags and display embedded links as text only
+
+            // Remove citation markers from resulting text
+
+
+            // console.log(parsedText);
+            // var firstPar = parsedJSON.getElementByTagName('p')[0].innerHTML;
+            // console.log(firstPar);
+        })
+        .catch(function (error) { console.log(error); });
 }
