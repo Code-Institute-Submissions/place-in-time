@@ -55,20 +55,19 @@ function parseContents() {
 
             else if (hiddenHistHeading) {
                 docHistoryHeader.innerHTML = "History: ";
-                var histParObj = $("#History").closest("h2").nextUntil("h2", "p");
+                var histParObj = $("#History").closest("h2").nextUntil("h2", "h3, p");
                 var histComp = "";
                 for (i = 0; i < histParObj.length; i++) {
                     histComp += histParObj[i].outerHTML;
                 }
                 console.log("Contents of histComp: " + histComp);
-                // var histCompUnlink = histComp.find("a").replaceWith(function () { return this.childNodes; });
-                // var histCompUnlink = histComp.find("a").replaceWith(function () { return this.innerHTML; }).end();
-                // var histCompUnlink = histComp.replace(/<\/?a[^>]*>/g, "");
-                // console.log("History Compilation Unlinked: " + histCompUnlink);
+
+                // Remove anchor tags but keep inner text
                 docHistoryPars.innerHTML = histComp.replace(/<\/?a[^>]*>/g, "");
-                // document.getElementById("history-pars").innerHTML = firstHPar.html();
+                $(".mw-editsection-bracket, .mw-editsection").remove();
+                // Remove citation brackets from the text
                 docHistoryPars.innerHTML = docHistoryPars.innerHTML.replace(/<sup\b[^>]*>(.*?)<\/sup>/gi, "");
-                // document.getElementById("history-pars").innerHTML = document.getElementById("history-pars").innerHTML.replace(/<sup\b[^>]*>(.*?)<\/sup>/gi, "");
+
             }
 
             console.log("Contents of history pars: " + docHistoryPars.innerHTML);

@@ -21,6 +21,10 @@ span#selected-loc {
     font-weight: 300;
 }
 
+#history-pars h3 {
+    
+}
+
 #hidden-content {
     display: none;
 }
