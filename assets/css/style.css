@@ -1,9 +1,13 @@
 body {
     background-color: #d1d1d1;
+    font-family: 'Roboto', serif;
 }
 
 #first-content {
-    height: 100vh;
+    /* height: 75vh; */
+    margin-bottom: 16px;
+    background-color: #e4e4e4;
+    border-bottom: 1px solid #8d8d8d;
 }
 
 .slate {
@@ -11,12 +15,19 @@ body {
      font-weight: 300;
 }
 
-.slate-bold {
-    font-weight: 400;
+.subhead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    /* text-align: center; */
+}
+
+.text-center h1 {
+    font-size: 3.4rem;
+    letter-spacing: 4px;
 }
 
 .logo {
-    margin: 5px 0 25px 0;
+    margin: 8px 0 16px 0;
     font-family: 'Roboto', serif;
 }
 
@@ -27,7 +38,7 @@ body {
 
 div#map {
     height: 50vh;
-    margin-bottom: 25px;
+    margin-bottom: 16px;
 }
 
 .focus-loc {
@@ -36,7 +47,11 @@ div#map {
 
 span#selected-loc {
     color: #212529;
-    font-weight: 300;
+    font-weight: 400;
+}
+
+#overview {
+    text-align: center;
 }
 
 .card {
@@ -62,6 +77,13 @@ span#selected-loc {
 
 .btn-link {
     padding: 0;
+}
+
+#history-pars h3 {
+    /* margin: 36px 0 8px 0; */
+    /* border-bottom: 1px solid #e4e4e4; */
+    border-top: 1px solid #e4e4e4;
+    padding: 36px 0 6px 0;
 }
 
 #hidden-content {

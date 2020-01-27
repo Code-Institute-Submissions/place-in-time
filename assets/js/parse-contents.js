@@ -52,7 +52,7 @@ function parseContents() {
                 docHistoryHeader.innerHTML = "Extra historical information is not available for this location.";
                 docHistoryPars.innerHTML = "";
             } else {
-                docHistoryHeader.innerHTML = "Click here to expand history";
+                docHistoryHeader.innerHTML = "Show me the history";
                 // Target headings and paragraphs within history section
                 var histParObj = $("#History").closest("h2").nextUntil("h2", "h3, p");
                 var histComp = "";
@@ -68,7 +68,7 @@ function parseContents() {
                 // Remove citation brackets from the text
                 docHistoryPars.innerHTML = docHistoryPars.innerHTML.replace(/<sup\b[^>]*>(.*?)<\/sup>/gi, "");
                 // Add styling to history sub-headings
-                $("#history-pars").children("h3").addClass("slate slate-bold");
+                $("#history-pars").children("h3").addClass("subhead");
             }
 
             // else if (hiddenHistHeading) {
