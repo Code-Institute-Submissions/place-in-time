@@ -16,6 +16,8 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
 	</script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica+SC&display=swap" rel="stylesheet">
 
 	<!-- Local Styling -->
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css">
@@ -24,27 +26,36 @@
 
 <body>
 
-	<section class="container-fluid" id="main-content">
+	<section class="container-fluid" id="first-content">
 		<div class="row">
 			<div class="col-md-8 mx-auto">
 				<div class="text-center">
-					<h1 class="logo slate">Place in Time</h1>
+					<h1 class="logo slate">ba<span id="logo-x">X</span>tory</h1>
 				</div>
 				<div id="map"></div>
-				<div class="text-center mr-1">
+				<!-- <div class="text-center mr-1">
 					<button id="get-locat-btn" class="btn btn-outline-secondary" type="button">Get location</button>
-				</div>
+				</div> -->
 				<div class="focus-loc">
-					<h2 class="logo slate">Place of interest: <span id="selected-loc"></span></h2>
+					<h2 class="logo slate"><span id="selected-loc"></span></h2>
 				</div>
-				<div class="extract-main">
-					<h3 class="slate">Overview: </h3>
-					<p id="extract-main-par"></p>
-				</div>
+
 				<!-- <div id="history-section">
 					<h3 class="slate" id="history-header">History: </h3>
 					<div id="history-pars"></div>
 				</div> -->
+
+			</div>
+		</div>
+	</section>
+
+	<section class="container-fluid" id="second-content">
+		<div class="row">
+			<div class="col-md-8 mx-auto">
+				<div class="extract-main">
+					<h3 class="slate">Overview: </h3>
+					<p id="extract-main-par"></p>
+				</div>
 				<div class="accordion" id="accordionExample">
 					<div class="card">
 						<div class="card-header" id="headingOne">
@@ -62,7 +73,7 @@
 					</div>
 				</div>
 				<div class="scroll-top">
-					<a href="#"><i class="fas fa-arrow-up"></i></a>
+					<a href="#"><i class="fas fa-arrow-up"></i><span> Back to the top</span></a>
 				</div>
 			</div>
 		</div>
