@@ -51,10 +51,9 @@ function parseContents() {
             if (!hiddenHistHeading) {
                 docHistoryHeader.innerHTML = "Extra historical information is not available for this location.";
                 docHistoryPars.innerHTML = "";
-            }
-
-            else if (hiddenHistHeading) {
-                docHistoryHeader.innerHTML = "History: ";
+            } else {
+                docHistoryHeader.innerHTML = "Click here to expand history";
+                // Target headings and paragraphs within history section
                 var histParObj = $("#History").closest("h2").nextUntil("h2", "h3, p");
                 var histComp = "";
                 for (i = 0; i < histParObj.length; i++) {
@@ -64,12 +63,36 @@ function parseContents() {
 
                 // Remove anchor tags but keep inner text
                 docHistoryPars.innerHTML = histComp.replace(/<\/?a[^>]*>/g, "");
+                // Remove edit brackets from sub-headings
                 $(".mw-editsection-bracket, .mw-editsection").remove();
-                // Remove wikipedia citation brackets from the text
+                // Remove citation brackets from the text
                 docHistoryPars.innerHTML = docHistoryPars.innerHTML.replace(/<sup\b[^>]*>(.*?)<\/sup>/gi, "");
+                // Add styling to history sub-headings
+                $("#history-pars").children("h3").addClass("slate slate-bold");
             }
 
-            docHiddenContent.innerHTML = ""; 
+            // else if (hiddenHistHeading) {
+            //     docHistoryHeader.innerHTML = "Click here to expand history";
+            //     // Target headings and paragraphs within history section
+            //     var histParObj = $("#History").closest("h2").nextUntil("h2", "h3, p");
+            //     var histComp = "";
+            //     for (i = 0; i < histParObj.length; i++) {
+            //         histComp += histParObj[i].outerHTML;
+            //     }
+            //     // console.log("Contents of histComp: " + histComp);
+
+            //     // Remove anchor tags but keep inner text
+            //     docHistoryPars.innerHTML = histComp.replace(/<\/?a[^>]*>/g, "");
+            //     // Remove edit brackets from sub-headings
+            //     $(".mw-editsection-bracket, .mw-editsection").remove();
+            //     // Remove citation brackets from the text
+            //     docHistoryPars.innerHTML = docHistoryPars.innerHTML.replace(/<sup\b[^>]*>(.*?)<\/sup>/gi, "");
+            //     // Add styling to history sub-headings
+            //     $("#history-pars").children("h3").addClass("slate slate-bold");
+            // }
+
+            docHiddenContent.innerHTML = "";
+            $("#collapseOne").removeClass("show");
 
             // console.log("Contents of history pars: " + docHistoryPars.innerHTML);
             // console.log("Contents of #History: " + historyHeading.innerHTML); 

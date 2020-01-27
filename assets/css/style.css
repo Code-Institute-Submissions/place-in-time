@@ -7,6 +7,10 @@ body {
      font-weight: 300;
 }
 
+.slate-bold {
+    font-weight: 400;
+}
+
 .logo {
     margin: 50px 0;
 }
@@ -21,8 +25,29 @@ span#selected-loc {
     font-weight: 300;
 }
 
-#history-pars h3 {
+.card {
+    background-color: inherit;
+    border: none;
+}
+
+.card-header {
+    background-color: inherit;
+    margin: 0;
+    padding: 0;
+    border: none;
     
+}
+
+#headingOne {
+    margin-bottom: 16px;
+}
+
+.card-body {
+    padding: 0;
+}
+
+.btn-link {
+    padding: 0;
 }
 
 #hidden-content {
