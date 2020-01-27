@@ -17,13 +17,13 @@ function searchWiki(clickLoc) {
     var url = "https://en.wikipedia.org/w/api.php";
 
     // Prepare google coordinates for geosearch params
-    var clickLoc = `${clickLoc.lat}|${clickLoc.lng}`;
+    var tfClickLoc = `${clickLoc.lat}|${clickLoc.lng}`;
 
     var params = {
         action: "query",
         list: "geosearch",
         // gscoord: "37.7891838|-122.4033522",
-        gscoord: clickLoc,
+        gscoord: tfClickLoc,
         gsradius: "10000",
         gslimit: "10",
         format: "json"

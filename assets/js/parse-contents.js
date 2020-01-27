@@ -60,32 +60,21 @@ function parseContents() {
                 for (i = 0; i < histParObj.length; i++) {
                     histComp += histParObj[i].outerHTML;
                 }
-                console.log("Contents of histComp: " + histComp);
+                // console.log("Contents of histComp: " + histComp);
 
                 // Remove anchor tags but keep inner text
                 docHistoryPars.innerHTML = histComp.replace(/<\/?a[^>]*>/g, "");
                 $(".mw-editsection-bracket, .mw-editsection").remove();
-                // Remove citation brackets from the text
+                // Remove wikipedia citation brackets from the text
                 docHistoryPars.innerHTML = docHistoryPars.innerHTML.replace(/<sup\b[^>]*>(.*?)<\/sup>/gi, "");
-
             }
 
-            console.log("Contents of history pars: " + docHistoryPars.innerHTML);
+            docHiddenContent.innerHTML = ""; 
 
-            // console.log("Contents of #History: " + historyHeading.innerHTML);
-
-            // Target first paragraph of history section
-
-            // !historyHeading ? firstHPar = firstHPar : 
-
-            // Remove anchor tags and display embedded links as text only
-
-            // Remove citation markers from resulting text
-
-
+            // console.log("Contents of history pars: " + docHistoryPars.innerHTML);
+            // console.log("Contents of #History: " + historyHeading.innerHTML); 
             // console.log(parsedText);
-            // var firstPar = parsedJSON.getElementByTagName('p')[0].innerHTML;
-            // console.log(firstPar);
+
         })
         .catch(function (error) { console.log(error); });
 }
