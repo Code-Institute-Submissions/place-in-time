@@ -71,32 +71,31 @@ function initMap() {
     var map = new google.maps.Map(document.getElementById("map"), {
         // zoom: 15,
         // center: randLoc
-        center: {lat: -34.397, lng: 150.644},
-        zoom: 6
+        // center: { lat: -34.397, lng: 150.644 },
+        zoom: 13
     });
-    
+
     infoWindow = new google.maps.InfoWindow;
 
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
+        navigator.geolocation.getCurrentPosition(function (position) {
             var pos = {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
 
             infoWindow.setPosition(pos);
-            infoWindow.setContent("location found.");
+            infoWindow.setContent("Location found.");
             infoWindow.open(map);
             map.setCenter(pos);
             searchWiki(pos);
-        }, function() {
+        }, function () {
             handleLocationError(true, infoWindow, map.getCenter());
         });
     } else {
         handleLocationError(false, infoWindow, map.getCenter());
     }
 
-    var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     // console.log(wikiLocations);
     // console.log(locations);
@@ -105,15 +104,25 @@ function initMap() {
     //     marker.setMap(null);
     // })
 
-    markers = [];
+    setTimeout(setMarkers, 500);
 
-    markers = wikiLocations.map(function (location, i) {
-        return new google.maps.Marker({
-            position: location,
-            label: labels[i % labels.length],
-            title: wikiTitles[i]
+    function setMarkers() {
+
+        var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        markers = [];
+
+        markers = wikiLocations.map(function (location, i) {
+            return new google.maps.Marker({
+                position: location,
+                label: labels[i % labels.length],
+                title: wikiTitles[i]
+            });
         });
-    });
+
+        var markerCluster = new MarkerClusterer(map, markers,
+        { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
+    }
 
     // console.log(markers);
 
@@ -131,15 +140,14 @@ function initMap() {
 
     // console.log(wikiLocations);
 
-    var markerCluster = new MarkerClusterer(map, markers,
-        { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
+    
 
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
-    infoWindow.setContent(browserHasGeolocation ? 
-                            "Error: The Geolocation service failed." :
-                            "Error: The browser doesn\'t support geolocation.");
+    infoWindow.setContent(browserHasGeolocation ?
+        "Error: The Geolocation service failed." :
+        "Error: The browser doesn\'t support geolocation.");
     infoWindow.open(map);
 }
