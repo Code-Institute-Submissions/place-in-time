@@ -97,7 +97,7 @@ function initMap() {
     }
 
 
-    // console.log(wikiLocations);
+    
     // console.log(locations);
 
     // markers.forEach(function(marker) {
@@ -107,6 +107,8 @@ function initMap() {
     setTimeout(setMarkers, 500);
 
     function setMarkers() {
+
+        console.log(wikiLocations);
 
         var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 

@@ -1,3 +1,11 @@
+:root {
+    --first-content-white: #e4e4e4;
+    --mid-grey: #8d8d8d;
+    --slate: #464646;
+    --ink-print: #212529;
+
+}
+
 body {
     background-color: #d1d1d1;
     font-family: 'Roboto', serif;
@@ -7,12 +15,12 @@ body {
 #first-content {
     /* height: 75vh; */
     margin-bottom: 16px;
-    background-color: #e4e4e4;
-    border-bottom: 1px solid #8d8d8d;
+    background-color: var(--first-content-white);
+    border-bottom: 1px solid var(--mid-grey);
 }
 
 .slate {
-     color: #464646;
+     color: var(--slate);
      font-weight: 300;
 }
 
@@ -47,7 +55,7 @@ div#map {
 }
 
 span#selected-loc {
-    color: #212529;
+    color: var(--ink-print);
     font-weight: 400;
 }
 
@@ -88,7 +96,7 @@ span#selected-loc {
 #history-pars h3 {
     /* margin: 36px 0 8px 0; */
     /* border-bottom: 1px solid #e4e4e4; */
-    border-top: 1px solid #e4e4e4;
+    border-top: 1px solid var(--first-content-white);
     padding: 36px 0 10px 0;
 }
 
@@ -102,8 +110,8 @@ a:hover {
 }
 
 #footer {
-    background-color: #212529;
-    color: #e4e4e4;
+    background-color: var(--ink-print);
+    color: var(--first-content-white);
     text-align: center;
     position: fixed;
     left: 0px;
