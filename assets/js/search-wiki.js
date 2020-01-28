@@ -12,18 +12,18 @@ var pageTitle;
 
 
 
-function searchWiki(clickLoc) {
+function searchWiki(userLoc) {
 
     var url = "https://en.wikipedia.org/w/api.php";
 
     // Prepare google coordinates for geosearch params
-    var tfClickLoc = `${clickLoc.lat}|${clickLoc.lng}`;
+    var tfUserLoc = `${userLoc.lat}|${userLoc.lng}`;
 
     var params = {
         action: "query",
         list: "geosearch",
         // gscoord: "37.7891838|-122.4033522",
-        gscoord: tfClickLoc,
+        gscoord: tfUserLoc,
         gsradius: "10000",
         gslimit: "20",
         format: "json"
@@ -63,7 +63,6 @@ function searchWiki(clickLoc) {
             // console.log("Page Id of closest entry: " + pageId);
             // console.log("Title of current location: " + pageTitleU);
         })
-        // .then(getExtracts)
         .then(getSummary)
         .then(parseContents)
         .catch(function (error) { console.log(error); });

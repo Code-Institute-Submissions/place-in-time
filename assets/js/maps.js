@@ -28,13 +28,14 @@
 
 // }
 
-window.onload = initMap;
+// window.onload = initMap;
 
 // Declare global variables
 var latLoc4;
 var lngLoc4;
 var sigPlace;
 var infoWindow;
+var pos;
 
 // 10 closest coordinates with wikipedia pages
 var wikiLocations = [];
@@ -60,11 +61,6 @@ var locations = [
 // Select random location from array
 var randLoc = locations[Math.floor(Math.random() * locations.length)];
 
-// Truncate coordinates for reverse geocode useage
-latLoc4 = parseFloat(randLoc.lat.toFixed(4));
-lngLoc4 = parseFloat(randLoc.lng.toFixed(4));
-// console.log(latLoc4);
-
 // Render map centered at random location from test array 
 function initMap() {
 
@@ -79,11 +75,11 @@ function initMap() {
 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
-            var pos = {
+            pos = {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
-
+            console.log("pos value: " + pos);
             infoWindow.setPosition(pos);
             infoWindow.setContent("Location found.");
             infoWindow.open(map);
@@ -96,15 +92,13 @@ function initMap() {
         handleLocationError(false, infoWindow, map.getCenter());
     }
 
-
-    
     // console.log(locations);
 
     // markers.forEach(function(marker) {
     //     marker.setMap(null);
     // })
 
-    setTimeout(setMarkers, 500);
+    setTimeout(setMarkers, 5000);
 
     function setMarkers() {
 
@@ -123,26 +117,28 @@ function initMap() {
         });
 
         var markerCluster = new MarkerClusterer(map, markers,
-        { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
+            { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
+
+        markers.forEach(function (marker) {
+            marker.addListener("click", function () {
+                clickLat = marker.getPosition().lat();
+                clickLng = marker.getPosition().lng();
+                clickLoc = { lat: clickLat, lng: clickLng }
+                console.log(clickLoc);
+                // randLoc = newLoc;
+                searchWiki(clickLoc);
+                // initMap();
+            })
+        })
     }
 
     // console.log(markers);
 
-    markers.forEach(function (marker) {
-        marker.addListener("click", function () {
-            clickLat = marker.getPosition().lat();
-            clickLng = marker.getPosition().lng();
-            clickLoc = { lat: clickLat, lng: clickLng }
-            console.log(clickLoc);
-            // randLoc = newLoc;
-            searchWiki(clickLoc);
-            // initMap();
-        })
-    })
+
 
     // console.log(wikiLocations);
 
-    
+
 
 }
 
