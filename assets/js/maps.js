@@ -34,6 +34,7 @@ window.onload = initMap;
 var latLoc4;
 var lngLoc4;
 var sigPlace;
+var infoWindow;
 
 // 10 closest coordinates with wikipedia pages
 var wikiLocations = [];
@@ -68,14 +69,37 @@ lngLoc4 = parseFloat(randLoc.lng.toFixed(4));
 function initMap() {
 
     var map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 15,
-        center: randLoc
+        // zoom: 15,
+        // center: randLoc
+        center: {lat: -34.397, lng: 150.644},
+        zoom: 6
     });
+    
+    infoWindow = new google.maps.InfoWindow;
+
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent("location found.");
+            infoWindow.open(map);
+            map.setCenter(pos);
+            searchWiki(pos);
+        }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+        });
+    } else {
+        handleLocationError(false, infoWindow, map.getCenter());
+    }
 
     var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    console.log(wikiLocations);
-    console.log(locations);
+    // console.log(wikiLocations);
+    // console.log(locations);
 
     // markers.forEach(function(marker) {
     //     marker.setMap(null);
@@ -91,7 +115,7 @@ function initMap() {
         });
     });
 
-    console.log(markers);
+    // console.log(markers);
 
     markers.forEach(function (marker) {
         marker.addListener("click", function () {
@@ -110,4 +134,12 @@ function initMap() {
     var markerCluster = new MarkerClusterer(map, markers,
         { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
 
+}
+
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+    infoWindow.setPosition(pos);
+    infoWindow.setContent(browserHasGeolocation ? 
+                            "Error: The Geolocation service failed." :
+                            "Error: The browser doesn\'t support geolocation.");
+    infoWindow.open(map);
 }

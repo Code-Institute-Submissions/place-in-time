@@ -25,7 +25,7 @@ function searchWiki(clickLoc) {
         // gscoord: "37.7891838|-122.4033522",
         gscoord: tfClickLoc,
         gsradius: "10000",
-        gslimit: "10",
+        gslimit: "20",
         format: "json"
     };
 
@@ -69,4 +69,4 @@ function searchWiki(clickLoc) {
         .catch(function (error) { console.log(error); });
 }
 
-searchWiki(randLoc);
+// searchWiki(randLoc);
