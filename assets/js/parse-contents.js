@@ -52,7 +52,7 @@ function parseContents() {
                 docHistoryHeader.innerHTML = "Extra historical information is not available for this location.";
                 docHistoryPars.innerHTML = "";
             } else {
-                docHistoryHeader.innerHTML = "Show me the history";
+                docHistoryHeader.innerHTML = `Show me the history <i class="fas fa-chevron-circle-down"></i>`;
                 // Target headings and paragraphs within history section
                 var histParObj = $("#History").closest("h2").nextUntil("h2", "h3, p");
                 var histComp = "";
