@@ -1,6 +1,7 @@
 body {
     background-color: #d1d1d1;
     font-family: 'Roboto', serif;
+    margin-bottom: 48px;
 }
 
 #first-content {
@@ -113,8 +114,8 @@ a:hover {
     display: none;
 }
 
-#footer-content {
-    
+#footer span {
+    padding: 0 10px;
 }
 
 #hidden-content {
