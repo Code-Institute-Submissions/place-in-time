@@ -45,17 +45,18 @@ function parseContents() {
             docHiddenContent.appendChild(tempEl);
             var hiddenHistHeading = document.getElementById("History");
             // console.log(historyHeading);
-
+            var emptyHistory = "Extra historical information is not available for this location.";
 
 
             if (!hiddenHistHeading) {
-                docHistoryHeader.innerHTML = "Extra historical information is not available for this location.";
+                docHistoryHeader.innerHTML = emptyHistory;
                 docHistoryPars.innerHTML = "";
             } else {
                 docHistoryHeader.innerHTML = `Show me the history <i class="fas fa-chevron-circle-down"></i>`;
                 // Target headings and paragraphs within history section
                 var histParObj = $("#History").closest("h2").nextUntil("h2", "h3, p");
                 var histComp = "";
+                if (histParObj.length === 0) { docHistoryHeader.innerHTML = emptyHistory; }
                 for (i = 0; i < histParObj.length; i++) {
                     histComp += histParObj[i].outerHTML;
                 }
@@ -69,6 +70,7 @@ function parseContents() {
                 docHistoryPars.innerHTML = docHistoryPars.innerHTML.replace(/<sup\b[^>]*>(.*?)<\/sup>/gi, "");
                 // Add styling to history sub-headings
                 $("#history-pars").children("h3").addClass("subhead");
+                // docHistoryHeader.removeClass("hide-history");
             }
 
             // else if (hiddenHistHeading) {

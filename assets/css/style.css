@@ -15,8 +15,13 @@ body {
 #first-content {
     /* height: 75vh; */
     margin-bottom: 16px;
+    padding: 0;
     background-color: var(--first-content-white);
     border-bottom: 1px solid var(--mid-grey);
+}
+
+#second-content {
+    padding: 0;
 }
 
 .slate {
@@ -59,8 +64,8 @@ span#selected-loc {
     font-weight: 400;
 }
 
-#overview {
-    text-align: center;
+.extract-main {
+    background-color: var(--first-content-white);
 }
 
 .card {

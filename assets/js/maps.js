@@ -1,32 +1,3 @@
-// function initMap() {
-
-//     var map = new google.maps.Map(document.getElementById("map"), {
-//         zoom: 3,
-//         center: {
-//             lat: 46.619261,
-//             lng: -33.134766
-//         }
-//     });
-
-//     var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-//     var locations = [
-//         { lat: 40.785091, lng: -73.968285 },
-//         { lat: 41.084045, lng: -73.874245 },
-//         { lat: 40.754932, lng: -73.984016 }
-//     ];
-
-//     var markers = locations.map(function (location, i) {
-//         return new google.maps.Marker({
-//             position: location,
-//             label: labels[i % labels.length]
-//         });
-//     });
-
-//     var markerCluster = new MarkerClusterer(map, markers,
-//         { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
-
-// }
 
 // window.onload = initMap;
 
@@ -36,12 +7,9 @@ var lngLoc4;
 var sigPlace;
 var infoWindow;
 var pos;
-
-// 10 closest coordinates with wikipedia pages
-var wikiLocations = [];
-// Page titles associated with above array
-var wikiTitles = [];
-var markers = [];
+var wikiLocations = []; // Initialise array for closest coordinates with wikipedia pages
+var wikiTitles = []; // Initialise array for markers titles
+var markers = []; // Initialise array for map markers
 
 // Generate some locations for testing
 var locations = [
@@ -61,7 +29,7 @@ var locations = [
 // Select random location from array
 var randLoc = locations[Math.floor(Math.random() * locations.length)];
 
-// Render map centered at random location from test array 
+// Render map centered at users current location 
 function initMap() {
 
     var map = new google.maps.Map(document.getElementById("map"), {
@@ -81,7 +49,7 @@ function initMap() {
             };
             console.log("pos value: " + pos);
             infoWindow.setPosition(pos);
-            infoWindow.setContent("Location found.");
+            infoWindow.setContent("You are near here");
             infoWindow.open(map);
             map.setCenter(pos);
             searchWiki(pos);
@@ -91,12 +59,6 @@ function initMap() {
     } else {
         handleLocationError(false, infoWindow, map.getCenter());
     }
-
-    // console.log(locations);
-
-    // markers.forEach(function(marker) {
-    //     marker.setMap(null);
-    // })
 
     setTimeout(setMarkers, 5000);
 
