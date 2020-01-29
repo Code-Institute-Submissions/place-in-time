@@ -16,9 +16,13 @@ body {
 
 #first-content {
     /* height: 75vh; */
-    padding: 0 0 16px 0;
-    background-color: var(--second-content-white);
-    /* border-bottom: 1px solid var(--mid-grey); */
+    padding: 0 -15px 16px 0;
+    margin-bottom: 8px;
+    background-color: var(--first-content-white);
+}
+
+#first-content .col-md-8 {
+    padding: 0;
 }
 
 #second-content {
@@ -59,7 +63,8 @@ div#map {
 }
 
 .current-loc p {
-    margin: -1px 15px;
+    /* margin: -2px 0; */
+    margin-bottom: 0;
     padding: 3px 8px;
     background-color: var(--ink-print);
     color: var(--first-content-white);
@@ -67,15 +72,17 @@ div#map {
 
 .focus-loc {
     text-align: center;
-    margin: 0 15px;
+    /* margin: 0 15px; */
     border: 2px solid var(--ink-print);
+    margin-bottom: 16px;
+    background-color: var(--second-content-white);
 }
 
 #selected-loc {
     color: var(--ink-print);
     font-weight: 400;
     margin: 0;
-    padding: 12px 0;
+    padding: 12px 8px;
 }
 
 .extract-main {
