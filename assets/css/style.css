@@ -1,5 +1,6 @@
 :root {
-    --first-content-white: #e4e4e4;
+    --second-content-white: #e4e4e4;
+    --first-content-white: #d1d1d1;
     --mid-grey: #8d8d8d;
     --slate: #464646;
     --ink-print: #212529;
@@ -7,21 +8,22 @@
 }
 
 body {
-    background-color: #d1d1d1;
+    background-color: var(--first-content-white);
     font-family: 'Roboto', serif;
+    /* padding-top: 16px; */
     margin-bottom: 48px;
 }
 
 #first-content {
     /* height: 75vh; */
-    margin-bottom: 16px;
-    /* padding: 0; */
-    background-color: var(--first-content-white);
-    border-bottom: 1px solid var(--mid-grey);
+    padding: 0 0 16px 0;
+    background-color: var(--second-content-white);
+    /* border-bottom: 1px solid var(--mid-grey); */
 }
 
 #second-content {
     /* padding: 0; */
+    background-color: var(--first-content-white);
 }
 
 .slate {
@@ -56,18 +58,29 @@ div#map {
     margin-bottom: 16px;
 }
 
+.current-loc p {
+    margin: -1px 15px;
+    padding: 3px 8px;
+    background-color: var(--ink-print);
+    color: var(--first-content-white);
+}
+
 .focus-loc {
     text-align: center;
     margin: 0 15px;
+    border: 2px solid var(--ink-print);
 }
 
 #selected-loc {
     color: var(--ink-print);
     font-weight: 400;
+    margin: 0;
+    padding: 12px 0;
 }
 
 .extract-main {
     /* background-color: var(--first-content-white); */
+    margin-top: 12px;
 }
 
 .card {
@@ -91,6 +104,7 @@ div#map {
 
 #history-header {
     color: var(--first-content-white);
+    padding-bottom: 4px;
 }
 
 .card-body {
