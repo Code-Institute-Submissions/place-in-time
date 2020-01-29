@@ -17,9 +17,9 @@ $(document).ready(function() {
     $("#history-header").click(function() {
         $(this).toggleClass("hide-history")
         if($(this).hasClass("hide-history")) {
-            $(this).html(`Show me the history <i class="fas fa-chevron-circle-down"></i>`);
+            $(this).html(`Tap here to show history`);
         } else {
-            $(this).html(`Hide the history <i class="fas fa-chevron-circle-left"></i>`);
+            $(this).html(`Hide history`);
         }
     })
 })

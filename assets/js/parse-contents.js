@@ -52,7 +52,7 @@ function parseContents() {
                 docHistoryHeader.innerHTML = emptyHistory;
                 docHistoryPars.innerHTML = "";
             } else {
-                docHistoryHeader.innerHTML = `Show me the history <i class="fas fa-chevron-circle-down"></i>`;
+                docHistoryHeader.innerHTML = `Tap here to show history`;
                 // Target headings and paragraphs within history section
                 var histParObj = $("#History").closest("h2").nextUntil("h2", "h3, p");
                 var histComp = "";
