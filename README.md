@@ -1,9 +1,14 @@
-# Your Project's Name
+# Place in Time - Live location based historical information app
 
-One or two paragraphs providing an overview of your project.
+Ever wondered about the history embedded in your immediate surroundings? Whether you find yourself in places familiar or otherwise, 
+Place in Time will bring the history of that locality directly to your fingertips.      
 
-Essentially, this part is your sales pitch.
- 
+Place in Time is a user friendly information trove that seeks to bring the life of old buildings and places very much into the present day, 
+where you are always only a few touches/clicks from a fascinating piece of history.
+
+
+## Demo
+
 ## UX
  
 Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
@@ -13,15 +18,42 @@ In particular, as part of this section we recommend that you provide a list of U
 
 This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
 
-## Features
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
+As a tourist, I would like to learn more about the backstory of my current location and other locations nearby. 
+In doing so, I can place myself in old stories which bridge the gap between past and present and improve my sense of cultural enrichment.       
+
+As a native, I would like to gain knowledge on the historical significance of buildings and places in my surroundings, both familiar and unfamiliar.        
+In doing so, I can develop a deeper understanding of how my native traditions and surroundings were shaped over time.
+
+### Strategy
+The design is intentionally simple and uncluttered, where the information takes a position of primary importance, 
+and where interactivity options are obvious and intuitive.
+
+### Scope
+Tourists and natives with an interest in history can have their location detected, before being served a selection of locations on a map, 
+starting with the closest option.
+
+### Structure
+As the app is primarily suited to mobile use, it is important for the map to utilise the maximum amount of screen space without compromising the core information content. 
+The currently selected location is displayed in an eye catching box in the centre of the screen, with a summary immediately beneath. Historical information, 
+when available is accessible through a button prompting the user to interact.
+
+### Skeleton
+## Surface
+The colour scheme and font choices were made to present the information in a simple yet attractive manner, while complementing the map.
+
+## Features
  
 ### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
+**Google Map** - shows users their current approximate location on the map, following a request to access their approximate device location.        
 
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
+**Google Map Markers** - shows users the closest places of interest by way of map markers, which when clicked will update the information on the page.      
+
+**Bootstrap Accordion** - allows users to expand the history paragraphs when tapped, and hide the history again if opted.       
+
+**Responsive Footer** - presents the user with an easy way to return to the top of the page, by appearing after a predefined scroll distance.       
+
+The anonymous functions related to the responsive footer can be found in the transport-features.js file located at assets/js/       
 
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
