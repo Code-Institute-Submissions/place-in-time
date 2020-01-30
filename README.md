@@ -3,9 +3,9 @@
 Project 2 - Interactive Front End Development (Code Institute 2020)        
 
 Ever wondered about the history embedded in your immediate surroundings? Whether you find yourself in places familiar or otherwise, 
-Place in Time will bring the history of that locality directly to your fingertips.      
+**Place in Time** will bring the history of that locality directly to your fingertips.      
 
-Place in Time is a user friendly information trove that seeks to bring the life of old buildings and places very much into the present day, 
+**Place in Time** is a user friendly information trove that seeks to bring the life of old buildings and places very much into the present day, 
 where you are always only a few touches/clicks from a fascinating piece of history.
 
 
@@ -15,12 +15,12 @@ where you are always only a few touches/clicks from a fascinating piece of histo
 As a tourist, I would like to learn more about the backstory of my current location and other locations nearby. 
 In doing so, I can place myself in old stories which bridge the gap between past and present and improve my sense of cultural enrichment.       
 
-As a native, I would like to gain knowledge on the historical significance of buildings and places in my surroundings, both familiar and unfamiliar.        
+As a native, I would like to gain knowledge on the historical significance of buildings and places in my surroundings, both familiar and unfamiliar. 
 In doing so, I can develop a deeper understanding of how the native traditions and surroundings were shaped over time.
 
 ### Strategy
 The design is intentionally simple and uncluttered, where the information takes a position of primary importance, 
-and where interactivity options are obvious and intuitive.
+and where interactivity options are obvious, intuitive and unobtrusive.
 
 ### Scope
 Tourists and natives with an interest in history can have their location detected, before being served a selection of locations on a map, 
@@ -52,7 +52,7 @@ The colour scheme and fonts were chosen to present the information in a simple y
 The anonymous functions related to the responsive footer can be found in the transport-features.js file located at assets/js/       
 
 ### Features Left to Implement
-**Favorites** - would allow users to store their favorite locations for future reference, by tagging a location by way of a button located in the information space.     
+**Favorites** - would allow users to store their favorite locations for future reference, by tagging a location using a button located in the information space.     
 
 **Pictures** - would allow the user to preview the location, by displaying a selection of images in a bootstrap carousel.        
 
