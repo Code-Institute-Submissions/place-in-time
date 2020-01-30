@@ -1,4 +1,6 @@
-# Place in Time - Live location based historical information app
+# Place in Time - Location based historical information app
+
+Project 2 - Interactive Front End Development (Code Institute 2020)        
 
 Ever wondered about the history embedded in your immediate surroundings? Whether you find yourself in places familiar or otherwise, 
 Place in Time will bring the history of that locality directly to your fingertips.      
@@ -10,20 +12,11 @@ where you are always only a few touches/clicks from a fascinating piece of histo
 ## Demo
 
 ## UX
- 
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
-
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
-
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
-
-
 As a tourist, I would like to learn more about the backstory of my current location and other locations nearby. 
 In doing so, I can place myself in old stories which bridge the gap between past and present and improve my sense of cultural enrichment.       
 
 As a native, I would like to gain knowledge on the historical significance of buildings and places in my surroundings, both familiar and unfamiliar.        
-In doing so, I can develop a deeper understanding of how my native traditions and surroundings were shaped over time.
+In doing so, I can develop a deeper understanding of how the native traditions and surroundings were shaped over time.
 
 ### Strategy
 The design is intentionally simple and uncluttered, where the information takes a position of primary importance, 
@@ -39,8 +32,11 @@ The currently selected location is displayed in an eye catching box in the centr
 when available is accessible through a button prompting the user to interact.
 
 ### Skeleton
-## Surface
-The colour scheme and font choices were made to present the information in a simple yet attractive manner, while complementing the map.
+
+Wireframe      
+
+### Surface
+The colour scheme and fonts were chosen to present the information in a simple yet attractive manner, while complementing the map.
 
 ## Features
  
@@ -55,26 +51,38 @@ The colour scheme and font choices were made to present the information in a sim
 
 The anonymous functions related to the responsive footer can be found in the transport-features.js file located at assets/js/       
 
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
-
 ### Features Left to Implement
-- Another feature idea
+**Favorites** - would allow users to store their favorite locations for future reference, by tagging a location by way of a button located in the information space.     
+
+**Pictures** - would allow the user to preview the location, by displaying a selection of images in a bootstrap carousel.        
 
 ## Technologies Used
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
+In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. 
+For each, provide its name, a link to its official site and a short sentence of why it was used.
 
-- [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
+[HTML5](https://en.wikipedia.org/wiki/HTML5) - The project uses **HTML5** to structure the page contents.     
+
+[CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) - The project uses **CSS3** to style the HTML elements.        
+
+[Bootstrap](https://getbootstrap.com) - The project uses the **Bootstrap** library, which makes the content responsive to screen size.       
+
+[JavaScript](https://en.wikipedia.org/wiki/JavaScript) - The project uses **JavaScript** to add dynamic functionality to the user experience.       
+
+[JQuery](https://jquery.com) - The project uses **JQuery** to simplify DOM manipulation.        
 
 
 ## Testing
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. 
+Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, 
+with the project providing an easy and straightforward way for the users to achieve their goals.
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
+Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, 
+link to the test file(s) and explain how to run them.
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. 
+A particularly useful form for describing your testing process is via scenarios, such as:
 
 1. Contact form:
     1. Go to the "Contact Us" page
@@ -90,20 +98,32 @@ If this section grows too long, you may want to split it off into a separate fil
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+The site is hosted through GitHub pages and is synced to the master branch of the repository. 
+This means that the latest push to the master branch will update the live site automatically.       
 
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
+The process for initial deployment is as follows -      
+On the repository GitHub page, click the settings tab located on the far right of the menu.     
+Scroll down to the section titled GitHub Pages and select "master branch" as the source.        
+The site deploys once a source is selected and a url link is accessible below the GitHib Pages section title.       
 
-In addition, if it is not obvious, you should also describe how to run your code locally.
+To run the code in this project locally, you can clone the full contents of the repository. In your terminal, 
+navigate to the directory you want the repository located and paste this command:
+
+    git clone https://github.com/elkrojo/place-in-time.git
+
+Once cloned, you can remove all connection to the source repository using the command:
+
+    git remote rm origin
 
 
 ## Credits
 
 ### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+The text content of the "Overview" paragraph is taken from the wikipedia page for that location, 
+accessed by requesting the summary content using the [Wikipedia REST API](https://en.wikipedia.org/api/rest_v1/#/Page%20content/get_page_summary__title_).      
+
+The text content of the "Show history" paragraphs is taken from the wikipedia page for that location,
+accessed by using JQuery to target the necessary html elements returned from a call to the [English Wikipedia API](https://en.wikipedia.org/w/api.php).     
 
 ### Media
 - The photos used in this site were obtained from ...
@@ -111,7 +131,3 @@ In addition, if it is not obvious, you should also describe how to run your code
 ### Acknowledgements
 
 - I received inspiration for this project from X
-
-https://www.mediawiki.org/wiki/API:Geosearch
-
-search terms = ["first paragraph from wikipedia api", ]
