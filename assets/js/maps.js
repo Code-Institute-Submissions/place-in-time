@@ -66,11 +66,17 @@ function initMap() {
 
         console.log(wikiLocations);
 
+        var nudgeLocs = wikiLocations.map(loc => (
+            { lat: loc.lat += (Math.random() / 25000), lng: loc.lng }
+            ));
+
+        console.log("nudegLocs: " + nudgeLocs);
+
         var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
         markers = [];
 
-        markers = wikiLocations.map(function (location, i) {
+        markers = nudgeLocs.map(function (location, i) {
             return new google.maps.Marker({
                 position: location,
                 label: labels[i % labels.length],
@@ -111,3 +117,4 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         "Error: The browser doesn\'t support geolocation.");
     infoWindow.open(map);
 }
+
