@@ -3,13 +3,13 @@ function getSummary() {
     var proxyurl = "https://cors-anywhere.herokuapp.com/";
     var url = `https://en.wikipedia.org/api/rest_v1/page/summary/${pageTitleU}`;
 
-        fetch(proxyurl+url,
-            {
-                method: "GET",
-                headers: {
-                    "User-Agent": "xumux@hotmail.com"
-                }
-            }
+        fetch(proxyurl+url
+            // {
+            //     method: "GET",
+            //     headers: {
+            //         "User-Agent": "xumux@hotmail.com"
+            //     }
+            // }
         )
         // fetch(url)
         .then(function (response) { return response.json(); })

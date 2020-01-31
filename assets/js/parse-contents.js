@@ -49,14 +49,16 @@ function parseContents() {
 
 
             if (!hiddenHistHeading) {
+                docHistoryHeader.disabled = true;
                 docHistoryHeader.innerHTML = emptyHistory;
                 docHistoryPars.innerHTML = "";
             } else {
+                docHistoryHeader.disabled = false;
                 docHistoryHeader.innerHTML = `Tap here to show history`;
                 // Target headings and paragraphs within history section
                 var histParObj = $("#History").closest("h2").nextUntil("h2", "h3, p");
-                var histComp = "";
                 if (histParObj.length === 0) { docHistoryHeader.innerHTML = emptyHistory; }
+                var histComp = "";
                 for (i = 0; i < histParObj.length; i++) {
                     histComp += histParObj[i].outerHTML;
                 }
@@ -93,7 +95,9 @@ function parseContents() {
             //     $("#history-pars").children("h3").addClass("slate slate-bold");
             // }
 
+            // Clear out contents of hidden HTML
             docHiddenContent.innerHTML = "";
+
             $("#collapseOne").removeClass("show");
 
             // console.log("Contents of history pars: " + docHistoryPars.innerHTML);

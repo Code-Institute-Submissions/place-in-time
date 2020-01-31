@@ -13,6 +13,7 @@ $(window).scroll(function() {
     }
 });
 
+// Toggle accordion header message
 $(document).ready(function() {
     $("#history-header").click(function() {
         $(this).toggleClass("hide-history")
