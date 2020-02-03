@@ -14,13 +14,23 @@ $(window).scroll(function() {
 });
 
 // Toggle accordion header message
-$(document).ready(function() {
-    $("#history-header").click(function() {
-        $(this).toggleClass("hide-history")
-        if($(this).hasClass("hide-history")) {
-            $(this).html(`Tap here to show history`);
-        } else {
-            $(this).html(`Hide history`);
-        }
-    })
-})
+// $(document).ready(function() {
+//     $("#history-header").click(function() {
+//         $('#collapseOne').toggleClass("show")
+//         if($('#collapseOne').hasClass("show")) {
+//             $(this).html(`Hide history`);
+//         } else {
+//             $(this).html(`Tap here to show history`);
+//         }
+//     })
+// })
+
+// $(document).ready(function() {
+//     $("#collapseOne").hasClass("show") ? docHistoryHeader.innerHTML = `Hide History` : docHistoryHeader.innerHTML = `Tap here to show history`;
+//     $("#history-header").click(function() {
+// });
+
+function handleClick() {
+    this.innerHTML = (this.innerHTML == "Tap here to show history" ? "Hide history" : "Tap here to show history");
+}
+document.getElementById("history-header").onclick=handleClick;
