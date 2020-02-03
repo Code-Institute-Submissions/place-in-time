@@ -30,7 +30,10 @@ $(window).scroll(function() {
 //     $("#history-header").click(function() {
 // });
 
+var showHistText = "Tap here to show history";
+var hideHistText = "Hide history";
+
 function handleClick() {
-    this.innerHTML = (this.innerHTML == "Tap here to show history" ? "Hide history" : "Tap here to show history");
+    this.innerHTML = (this.innerHTML == showHistText ? hideHistText : showHistText);
 }
 document.getElementById("history-header").onclick=handleClick;
