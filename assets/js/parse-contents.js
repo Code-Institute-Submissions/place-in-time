@@ -58,7 +58,7 @@ function parseContents() {
                 
                 // Target headings and paragraphs within history section
                 var histParObj = $("#History").closest("h2").nextUntil("h2", "h3, p");
-                if (histParObj.length === 0) { docHistoryHeader.innerHTML = emptyHistory; }
+                if (histParObj.length === 0) { docHistoryHeader.innerHTML = emptyHistory; docHistoryHeader.disabled = true;}
                 var histComp = "";
                 for (i = 0; i < histParObj.length; i++) {
                     histComp += histParObj[i].outerHTML;
