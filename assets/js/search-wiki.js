@@ -36,7 +36,7 @@ function searchWiki(userLoc) {
         .then(function (response) { return response.json(); })
         .then(function (response) {
             var pages = response.query.geosearch;
-            console.log(pages);
+            // console.log(pages);
             // Clear out arrays used for markers
             wikiLocations = [];
             wikiTitles = [];

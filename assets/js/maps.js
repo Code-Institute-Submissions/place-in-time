@@ -47,7 +47,7 @@ function initMap() {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
-            console.log("pos value: " + pos);
+            // console.log("pos value: " + pos);
             infoWindow.setPosition(pos);
             infoWindow.setContent("You are near here");
             infoWindow.open(map);
@@ -65,13 +65,13 @@ function initMap() {
 
     function setMarkers() {
 
-        console.log(wikiLocations);
+        // console.log(wikiLocations);
 
         var nudgeLocs = wikiLocations.map(loc => (
-            { lat: loc.lat += (Math.random() / 25000), lng: loc.lng }
+            { lat: loc.lat += (Math.random() / 25000), lng: loc.lng += (Math.random() / 25000) }
             ));
 
-        console.log("nudegLocs: " + nudgeLocs);
+        // console.log("nudegLocs: " + nudgeLocs);
 
         var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -93,7 +93,7 @@ function initMap() {
                 clickLat = marker.getPosition().lat();
                 clickLng = marker.getPosition().lng();
                 clickLoc = { lat: clickLat, lng: clickLng }
-                console.log(clickLoc);
+                // console.log(clickLoc);
                 // randLoc = newLoc;
                 searchWiki(clickLoc);
                 // initMap();
