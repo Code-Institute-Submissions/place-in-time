@@ -1,3 +1,5 @@
+
+/* Colour palette */
 :root {
     --second-content-white: #e4e4e4;
     --first-content-white: #d1d1d1;
@@ -10,12 +12,10 @@
 body {
     background-color: var(--first-content-white);
     font-family: 'Roboto', serif;
-    /* padding-top: 16px; */
     margin-bottom: 48px;
 }
 
 #first-content {
-    /* height: 75vh; */
     padding: 0 -15px 16px 0;
     margin-bottom: 8px;
     background-color: var(--first-content-white);
@@ -26,7 +26,6 @@ body {
 }
 
 #second-content {
-    /* padding: 0; */
     background-color: var(--first-content-white);
 }
 
@@ -38,7 +37,6 @@ body {
 .subhead {
     font-size: 1.2rem;
     font-weight: 500;
-    /* text-align: center; */
 }
 
 .text-center h1 {
@@ -52,7 +50,6 @@ body {
 }
 
 #logo-x {
-    /* font-family: 'IM Fell Double Pica SC', serif; */
     font-family: 'Forum', cursive;
     text-shadow: 1px 1px 3px #911100;
 }
@@ -63,7 +60,6 @@ div#map {
 }
 
 .current-loc p {
-    /* margin: -2px 0; */
     margin-bottom: 0;
     padding: 3px 8px;
     background-color: var(--ink-print);
@@ -72,7 +68,6 @@ div#map {
 
 .focus-loc {
     text-align: center;
-    /* margin: 0 15px; */
     border: 2px solid var(--ink-print);
     margin-bottom: 16px;
     background-color: var(--second-content-white);
@@ -86,7 +81,6 @@ div#map {
 }
 
 .extract-main {
-    /* background-color: var(--first-content-white); */
     margin-top: 12px;
 }
 
@@ -133,8 +127,6 @@ div.card {
 }
 
 #history-pars h3 {
-    /* margin: 36px 0 8px 0; */
-    /* border-bottom: 1px solid #e4e4e4; */
     border-top: 1px solid var(--first-content-white);
     padding: 36px 0 10px 0;
 }
@@ -157,7 +149,7 @@ a:hover {
     bottom: 0px;
     height: 48px;
     width: 100%;
-    padding: 4% 0;
+    padding-top: 12px;
     display: none;
 }
 
@@ -174,10 +166,6 @@ a:hover {
 
     #first-content .col-md-8 {
         padding: 15px 15px 0 15px;
-    }
-
-    #footer {
-        padding: 2% 0;
     }
 
 }

@@ -30,6 +30,8 @@ $(window).scroll(function() {
 //     $("#history-header").click(function() {
 // });
 
+
+// Toggle messsage of accordion button for suggested action
 var showHistText = "Tap here to show history";
 var hideHistText = "Hide history";
 
