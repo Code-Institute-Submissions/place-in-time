@@ -37,6 +37,18 @@ body {
     margin-bottom: 0.8rem;
 }
 
+.btn-primary {
+    background-color: var(--slate);
+    border-color: var(--slate);
+    color: var(--second-content-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--ink-print);
+    border-color: #000;
+    color: var(--second-content-white);
+}
+
 #first-content {
     padding: 0 -15px 16px 0;
     margin-bottom: 8px;

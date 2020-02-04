@@ -1,7 +1,9 @@
+// Display modal on page load
 $(window).on('load', function() {
     $('#instructModal').modal('show');
 });
 
+// Call initMap on modal button click
 $('#refresh-page').on('click', function (event) {
     event.preventDefault();
     initMap();
