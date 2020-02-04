@@ -60,7 +60,8 @@ function initMap() {
         handleLocationError(false, infoWindow, map.getCenter());
     }
 
-    setTimeout(setMarkers, 5000);
+    // setTimeout(setMarkers, 5000);
+    setMarkers();
 
     function setMarkers() {
 

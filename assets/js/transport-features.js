@@ -2,6 +2,11 @@ $(window).on('load', function() {
     $('#instructModal').modal('show');
 });
 
+$('#refresh-page').on('click', function (event) {
+    event.preventDefault();
+    initMap();
+})
+
 // Return to top of page
 $('.scroll-top').on('click', function (event) {
     event.preventDefault();
