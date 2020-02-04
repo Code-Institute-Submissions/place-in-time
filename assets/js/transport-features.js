@@ -1,3 +1,7 @@
+$(window).on('load', function() {
+    $('#instructModal').modal('show');
+});
+
 // Return to top of page
 $('.scroll-top').on('click', function (event) {
     event.preventDefault();

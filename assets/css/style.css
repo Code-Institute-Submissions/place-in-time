@@ -15,6 +15,28 @@ body {
     margin-bottom: 48px;
 }
 
+#instructModalHeader {
+    background-color: var(--ink-print);
+}
+
+.close {
+    color: var(--second-content-white);
+    text-shadow: 0 1px 0 var(--ink-print);
+    font-size: 2rem;
+}
+
+.close:hover {
+    color: var(--second-content-white);
+}
+
+#instructModalLabel {
+    color: var(--second-content-white);
+}
+
+.modal-body h6 {
+    margin-bottom: 0.8rem;
+}
+
 #first-content {
     padding: 0 -15px 16px 0;
     margin-bottom: 8px;

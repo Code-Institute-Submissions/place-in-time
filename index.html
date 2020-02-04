@@ -28,6 +28,34 @@
 
 <body>
 
+	<!-- Modal -->
+	<div class="modal hide fade" id="instructModal" role="dialog" aria-labelledby="instructModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header" id="instructModalHeader">
+					<h5 class="modal-title" id="instructModalLabel">Welcome to <strong>Place in Time</strong></h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+				</div>
+				<div class="modal-body">
+					<h6>A few things to note before you get started...</h6>
+                    <ul>
+                        <li>This site requires access to your device location in order to display results in your proximity. 
+                            Please ensure all location services are active on your device before continuing.</li>
+                        <li>Please ensure all adblockers and trackers are disabled for this site, as third party service providers use this info to deliver best results.</li>
+                        <li>If you are ready to be transported back in time, simply press the button below!</li>
+                    </ul>
+				</div>
+				<div class="modal-footer">
+					<!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Take me back</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<section class="container-fluid" id="first-content">
 		<div class="row">
 			<div class="col-md-8 mx-auto">
@@ -99,11 +127,11 @@
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
 	</script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 	</script>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script
 		src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"
 		type="text/javascript"></script>
