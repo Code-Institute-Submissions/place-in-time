@@ -10,7 +10,7 @@ where you are always only a few touches/clicks from a fascinating piece of histo
 
 
 ## Demo
-Clicking on the screen below will bring you to a live demo.     
+Clicking on the screen below will bring you to a live demo. Right click and select "Open link in new tab" to open the site in a new browser tab.     
 
 [![Main_Screen](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/main_screen.png)](https://elkrojo.github.io/place-in-time/)
 
@@ -26,8 +26,7 @@ The design is intentionally simple and uncluttered, where the information takes 
 and where interactivity options are obvious, intuitive and unobtrusive.
 
 ### Scope
-Tourists and natives with an interest in history can have their location detected, before being served a selection of locations on a map, 
-starting with the closest option.
+Tourists and natives with an interest in history can have their location detected, before being served a selection of locations on a map, starting with the closest option.
 
 ### Structure
 As the app is primarily suited to mobile use, it is important for the map to utilise the maximum amount of screen space without compromising the core information content. 
@@ -39,12 +38,13 @@ when available is accessible through a button prompting the user to interact.
 Wireframe      
 
 ### Surface
-The colour scheme and fonts were chosen to present the information in a simple yet attractive manner, while complementing the map.
+The user interface is centered on the map element, which occupies half of the initial screen height. The map contains colourful points of focus for ease of navigation.
+The colour scheme and fonts for the location heading and history section were chosen to present the information in a simple yet attractive manner, while complementing the map above.
 
 ## Features
  
 ### Existing Features
-**Google Map** - shows users their current approximate location on the map, following a request to access their approximate device location.        
+**Google Map** - shows users their current approximate location on the map, following a request from the browser to access their approximate device location.        
 
 **Google Map Markers** - shows users the closest places of interest by way of map markers, which when clicked will update the information on the page.      
 
@@ -57,13 +57,9 @@ The anonymous functions related to the responsive footer can be found in the tra
 ### Features Left to Implement
 **Favorites** - would allow users to store their favorite locations for future reference, by tagging a location using a button located in the information space.     
 
-**Pictures** - would allow the user to preview the location, by displaying a selection of images in a bootstrap carousel.        
+**Pictures** - would allow the user to preview the location visually, by displaying a selection of images in a bootstrap carousel.        
 
 ## Technologies Used
-
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. 
-For each, provide its name, a link to its official site and a short sentence of why it was used.
-
 [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - The project uses **JavaScript** to add dynamic functionality to the user experience.
 
 [HTML5](https://en.wikipedia.org/wiki/HTML5) - The project uses **HTML5** to structure the page contents.     
@@ -121,15 +117,15 @@ Once cloned, you can remove all connection to the source repository using the co
 
 ## Credits
 
+### Map
+The interactive map used in this site is supplied by Google, accessed by interfacing with the [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/tutorial).
+
 ### Content
 The text content of the "Overview" paragraph is taken from the wikipedia page for that location, 
-accessed by requesting the summary content using the [Wikipedia REST API](https://en.wikipedia.org/api/rest_v1/#/Page%20content/get_page_summary__title_).      
+accessed by requesting the summary content using the [Wikipedia REST API](https://en.wikipedia.org/api/rest_v1/#/Page%20content/get_page_summary__title_) for the selected location.      
 
 The text content of the "Show history" paragraphs is taken from the wikipedia page for that location,
-accessed by using JQuery to target the necessary html elements returned from a call to the [English Wikipedia API](https://en.wikipedia.org/w/api.php).     
-
-### Media
-- The photos used in this site were obtained from ...
+accessed by using JQuery to target the necessary html elements returned from a call to the [English Wikipedia API](https://en.wikipedia.org/w/api.php) for the selected location.     
 
 ### Acknowledgements
 
