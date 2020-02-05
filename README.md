@@ -10,8 +10,9 @@ where you are always only a few touches/clicks from a fascinating piece of histo
 
 
 ## Demo
-Clicking the image below will bring you to a live demo.
-[![Home](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/main_screen.png)](https://elkrojo.github.io/place-in-time/)
+Clicking on the screen below will bring you to a live demo.     
+
+[![Main_Screen](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/main_screen.png)](https://elkrojo.github.io/place-in-time/)
 
 ## UX
 As a tourist, I would like to learn more about the backstory of my current location and other locations nearby. 
