@@ -87,7 +87,24 @@ A particularly useful form for describing your testing process is via scenarios,
     1. Go to the "Contact Us" page
     2. Try to submit the empty form and verify that an error message about the required fields appears
     3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
+    4. Try to submit the form with all inputs valid and verify that a success message appears.      
+
+**Welcome Modal:**
+1. Click on the "Find my location" button and verify that the map updates with markers located nearby.      
+
+**Map Markers:**
+1. Click on a map marker and verify that the "Place of interest" and "Overview" sections are updated for each marker clicked.       
+
+**Accordion:**
+1. For locations without history, verify that the appropriate button message is displayed and the button is made inactive.
+2. For locations with history content, verify that the appropriate button message is updated with suggested action, and the button is made active.
+3. Try to access the history paragraphs by clicking on the "Tap here to show history" message, verify that the accordion expands, the history is displayed, and the button message is updated with suggested action.
+4. Try to close the history paragraphs by clicking on the "Hide history" message, verify that the accordion retracts, the history is hidden, and the button message is updated with suggested action.
+5. Try to access a new location by clicking on a map marker while the accordion is open, verify that the accordion remains open between locations, the page content is updated correctly, and the button message remains relative to the current state.
+
+**Responsive Footer**
+1. Try to scroll through a history section which extends at least 500 pixels beyond viewport height, verify that the footer slides up from the bottom displaying the relative message.
+2. Try to return to the top of the page by clicking the footer, verify that the page scrolls to the top and the footer slides back down.
 
 In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
 
