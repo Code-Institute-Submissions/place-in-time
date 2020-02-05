@@ -61,15 +61,15 @@ The anonymous functions related to the responsive footer can be found in the tra
 In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. 
 For each, provide its name, a link to its official site and a short sentence of why it was used.
 
+[JavaScript](https://en.wikipedia.org/wiki/JavaScript) - The project uses **JavaScript** to add dynamic functionality to the user experience.
+
 [HTML5](https://en.wikipedia.org/wiki/HTML5) - The project uses **HTML5** to structure the page contents.     
 
 [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) - The project uses **CSS3** to style the HTML elements.        
 
-[Bootstrap](https://getbootstrap.com) - The project uses the **Bootstrap** library, which makes the content responsive to screen size.       
+[Bootstrap](https://getbootstrap.com) - The project uses the **Bootstrap** library, which makes the content responsive to screen size.              
 
-[JavaScript](https://en.wikipedia.org/wiki/JavaScript) - The project uses **JavaScript** to add dynamic functionality to the user experience.       
-
-[JQuery](https://jquery.com) - The project uses **JQuery** to simplify DOM manipulation.        
+[JQuery](https://jquery.com) - The project uses **JQuery** to simplify DOM manipulation.       
 
 
 ## Testing

@@ -95,7 +95,7 @@ div#map {
 }
 
 .current-loc p {
-    margin-bottom: 0;
+    margin-bottom: -5px;
     padding: 3px 8px;
     background-color: var(--ink-print);
     color: var(--first-content-white);
