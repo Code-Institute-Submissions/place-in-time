@@ -68,7 +68,7 @@ function initMap() {
         // console.log(wikiLocations);
 
         var nudgeLocs = wikiLocations.map(loc => (
-            { lat: loc.lat += (Math.random() / 25000), lng: loc.lng += (Math.random() / 25000) }
+            { lat: loc.lat += (Math.random() / 20000), lng: loc.lng += (Math.random() / 20000) }
             ));
 
         // console.log("nudegLocs: " + nudgeLocs);

@@ -42,7 +42,7 @@ $(window).scroll(function() {
 // });
 
 
-// Toggle messsage of accordion button for suggested action
+// Toggle messsage of accordion button to display suggested action
 var showHistText = "Tap here to show history";
 var hideHistText = "Hide history";
 
