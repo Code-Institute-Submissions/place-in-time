@@ -91,6 +91,7 @@ body {
 div#map {
     height: 50vh;
     margin-bottom: 16px;
+    border-bottom: 1px solid var(--mid-grey);
 }
 
 .current-loc p {
@@ -200,6 +201,10 @@ a:hover {
 
     #first-content .col-md-8 {
         padding: 15px 15px 0 15px;
+    }
+
+    div#map {
+        border: 1px solid var(--mid-grey);
     }
 
 }
