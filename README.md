@@ -1,4 +1,4 @@
-# Place in Time - Location based historical information app
+# Place in Time - Geolocation based history app
 
 Project 2 - Interactive Front End Development (Code Institute 2020)        
 
