@@ -43,26 +43,32 @@ The colour scheme and fonts for the location heading and history section were ch
 ## Features
  
 ### Existing Features
+
 **Welcome Modal** - presents users with some helpful information and operational instructions before they see the app.      
 
 ![Modal](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/modal_hlite.png "Highlighted Modal")
+
 
 **Google Map** - shows users their current approximate location on the map, following a request from the browser to access their approximate device location.        
 
 ![Modal](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/gmap_hlite.png "Highlighted Map")
 
+
 **Google Map Markers** - shows users the closest places of interest by way of map markers, which when clicked will update the information on the page.      
 
 ![Modal](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/gmap_markers_hlite.png "Highlighted Markers")
 
-**Bootstrap Accordion** - allows users to expand the history paragraphs section when tapped, and hide the history again if opted.
+
+**Bootstrap Accordion** - allows users to expand the history paragraphs section when tapped, and hide the history again if opted.       
 
 ![Modal](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/accordion_cl_hlite.png "Highlighted Accordion Closed")
-![Modal](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/accordion_op_hlite.png "Highlighted Accordion Open")
+![Modal](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/accordion_op_hlite.png "Highlighted Accordion Open")      
+
 
 **Responsive Footer** - presents the user with an easy way to return to the top of the page, by appearing after a predefined scroll distance.       
 
-![Modal](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/footer_hlite.png "Highlighted Footer")
+![Modal](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/footer_hlite.png "Highlighted Footer")        
+
 
 The functions related to the modal, accordion display message and responsive footer can be found at file path:
 
@@ -86,9 +92,15 @@ The functions related to the modal, accordion display message and responsive foo
 
 
 ## Testing
+The user story scenarios were adressed effectively, where information relative to the selected marker was presented clearly and cleanly. 
+The map section alerts the user to their current location, while providing them with clickable options in the form of map markers. 
+The page elements will resize and refow when the screen size is reduced or increased.        
 
 **Welcome Modal:**
-1. Click on the "Find my location" button and verify that the map updates with markers located nearby.      
+1. Click on the "Find my location" button and verify that the map updates with markers located nearby.   
+
+**Map:**
+1. Try to resize the browser window on a desktop device, verify that the map aligns with the text content below when the window width exceeds 768 pixels.       
 
 **Map Markers:**
 1. Try to refresh the page, verify that the map markers are set relative to your current location.
