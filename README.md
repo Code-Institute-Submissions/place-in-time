@@ -45,15 +45,26 @@ The colour scheme and fonts for the location heading and history section were ch
 ### Existing Features
 **Welcome Modal** - presents users with some helpful information and operational instructions before they see the app.      
 
+![Modal](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/modal_hlite.png "Highlighted Modal")
+
 **Google Map** - shows users their current approximate location on the map, following a request from the browser to access their approximate device location.        
+
+![Modal](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/gmap_hlite.png "Highlighted Map")
 
 **Google Map Markers** - shows users the closest places of interest by way of map markers, which when clicked will update the information on the page.      
 
-**Bootstrap Accordion** - allows users to expand the history paragraphs section when tapped, and hide the history again if opted.       
+![Modal](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/gmap_markers_hlite.png "Highlighted Markers")
+
+**Bootstrap Accordion** - allows users to expand the history paragraphs section when tapped, and hide the history again if opted.
+
+![Modal](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/accordion_cl_hlite.png "Highlighted Accordion Closed")
+![Modal](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/accordion_op_hlite.png "Highlighted Accordion Open")
 
 **Responsive Footer** - presents the user with an easy way to return to the top of the page, by appearing after a predefined scroll distance.       
 
-The functions related to the modal, accordion display message and responsive footer can be found using the file path:
+![Modal](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/footer_hlite.png "Highlighted Footer")
+
+The functions related to the modal, accordion display message and responsive footer can be found at file path:
 
     assets/js/transport-features.js
    
