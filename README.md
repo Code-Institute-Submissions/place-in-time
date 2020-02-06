@@ -22,8 +22,7 @@ As a native, I would like to gain knowledge on the historical significance of bu
 In doing so, I can develop a deeper understanding of how the native traditions and surroundings were shaped over time.
 
 ### Strategy
-The design is intentionally simple and uncluttered, where the information takes a position of primary importance, 
-and where interactivity options are obvious, intuitive and unobtrusive.
+The design is intentionally simple and uncluttered. The information takes a position of primary importance, where interactivity options are obvious, intuitive and unobtrusive.
 
 ### Scope
 Tourists and natives with an interest in history can have their location detected, before being served a selection of locations on a map, starting with the closest option.
@@ -92,20 +91,28 @@ with the project providing an easy and straightforward way for the users to achi
 **Accordion:**
 1. Try selecting a map marker without history content, verify that the appropriate button message is displayed and the button is made inactive.
 2. Try selecting a map marker with history content, verify that the appropriate button message is updated with the relevant suggested action, and the button is made active.
-3. Try to access the history paragraphs by clicking on the "Tap here to show history" message, verify that the accordion expands, the history is displayed, and the button message is updated with the relevant suggested action.
-4. Try to close the history paragraphs by clicking on the "Hide history" message, verify that the accordion retracts, the history is hidden, and the button message is updated with the relevant suggested action.
-5. Try to access a new location by clicking on a map marker while the accordion is open, verify that the accordion remains open between locations, the page content is updated correctly, and the button message remains relative to the current accordion state.
+3. Try to access the history paragraphs by clicking on the "Tap here to show history" message, verify that the accordion expands, the history is displayed, 
+    and the button message is updated with the relevant suggested action.
+4. Try to close the history paragraphs by clicking on the "Hide history" message, verify that the accordion retracts, the history is hidden, 
+    and the button message is updated with the relevant suggested action.
+5. Try to access a new location by clicking on a map marker while the accordion is open, verify that the accordion remains open between locations, 
+    the page content is updated correctly, and the button message remains relative to the current accordion state.
 
-**Responsive Footer**
-1. Try to scroll through a history section which extends at least 500 pixels beyond the viewport height, verify that the footer slides up from the bottom and displays the relevant suggested action.
+**Responsive Footer:**
+1. Try to scroll through a history section which extends at least 500 pixels beyond the viewport height, verify that the footer slides up from the bottom 
+    and displays the relevant suggested action.
 2. Try to return to the top of the page by clicking the footer, verify that the page scrolls to the top and the footer slides back down to a hidden position.
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.        
 
+**Browser Compatibility**       
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+The site was tested on multiple browsers (Chrome, Firefox, Safari) and on a few portable devices (iPhone 5s: Safari, iPad: Safari) to assess compatibility and responsiveness. 
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+**!Known Issues!**      
+
+While testing, I encountered an issue when trying to view the page in Firefox while the developer tools window is open. As a result, none of the dynamic page content is loaded. 
+Closing the developer tools window and refreshing the page causes the page to load as intended. This appears to be a known issue between Firefox developer tools and Google Maps JavaScript API, specifically.
 
 ## Deployment
 
