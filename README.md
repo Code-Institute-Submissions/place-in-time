@@ -30,7 +30,7 @@ Tourists and natives with an interest in history can have their location detecte
 
 ### Structure
 As the app is primarily suited to mobile use, it is important for the map to utilise the maximum amount of screen space without compromising the core information content. 
-The currently selected location is displayed in an eye catching box in the centre of the screen, with a summary immediately beneath. Historical information, 
+The currently selected location is displayed in an eye catching box in the centre of the screen, with an overview immediately beneath. Historical information, 
 when available is accessible through a button prompting the user to interact.
 
 ### Skeleton
@@ -44,20 +44,24 @@ The colour scheme and fonts for the location heading and history section were ch
 ## Features
  
 ### Existing Features
+**Welcome Modal** - presents users with some helpful information and operational instructions before they see the app.      
+
 **Google Map** - shows users their current approximate location on the map, following a request from the browser to access their approximate device location.        
 
 **Google Map Markers** - shows users the closest places of interest by way of map markers, which when clicked will update the information on the page.      
 
-**Bootstrap Accordion** - allows users to expand the history paragraphs when tapped, and hide the history again if opted.       
+**Bootstrap Accordion** - allows users to expand the history paragraphs section when tapped, and hide the history again if opted.       
 
 **Responsive Footer** - presents the user with an easy way to return to the top of the page, by appearing after a predefined scroll distance.       
 
-The anonymous functions related to the responsive footer can be found in the transport-features.js file located at assets/js/       
+The functions related to the modal, accordion display message and responsive footer can be found using the file path:
 
+    assets/js/transport-features.js
+   
 ### Features Left to Implement
 **Favorites** - would allow users to store their favorite locations for future reference, by tagging a location using a button located in the information space.     
 
-**Pictures** - would allow the user to preview the location visually, by displaying a selection of images in a bootstrap carousel.        
+**Pictures** - would allow the user to preview the location visually, by displaying a selection of images in a carousel styled viewer.        
 
 ## Technologies Used
 [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - The project uses **JavaScript** to add dynamic functionality to the user experience.
@@ -77,38 +81,27 @@ In this section, you need to convince the assessor that you have conducted enoug
 Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, 
 with the project providing an easy and straightforward way for the users to achieve their goals.
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, 
-link to the test file(s) and explain how to run them.
-
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. 
-A particularly useful form for describing your testing process is via scenarios, such as:
-
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.      
-
 **Welcome Modal:**
 1. Click on the "Find my location" button and verify that the map updates with markers located nearby.      
 
 **Map Markers:**
 1. Try to refresh the page, verify that the map markers are set relative to your current location.
-2. Try to click on a marker cluster, verify that the map zooms in on the cluster and shows independant locations within.
-3. Click on a map marker and verify that the "Place of interest" and "Overview" sections are updated for each marker clicked.       
+2. Try to click on a marker cluster, verify that the map zooms in on the cluster and shows the independant markers within.
+3. Click on a map marker and verify that the "Place of interest" and "Overview" sections are updated for each marker clicked.
 
 **Accordion:**
-1. For locations without history, verify that the appropriate button message is displayed and the button is made inactive.
-2. For locations with history content, verify that the appropriate button message is updated with suggested action, and the button is made active.
-3. Try to access the history paragraphs by clicking on the "Tap here to show history" message, verify that the accordion expands, the history is displayed, and the button message is updated with suggested action.
-4. Try to close the history paragraphs by clicking on the "Hide history" message, verify that the accordion retracts, the history is hidden, and the button message is updated with suggested action.
+1. Try selecting a map marker without history content, verify that the appropriate button message is displayed and the button is made inactive.
+2. Try selecting a map marker with history content, verify that the appropriate button message is updated with the relevant suggested action, and the button is made active.
+3. Try to access the history paragraphs by clicking on the "Tap here to show history" message, verify that the accordion expands, the history is displayed, and the button message is updated with the relevant suggested action.
+4. Try to close the history paragraphs by clicking on the "Hide history" message, verify that the accordion retracts, the history is hidden, and the button message is updated with the relevant suggested action.
 5. Try to access a new location by clicking on a map marker while the accordion is open, verify that the accordion remains open between locations, the page content is updated correctly, and the button message remains relative to the current accordion state.
 
 **Responsive Footer**
-1. Try to scroll through a history section which extends at least 500 pixels beyond viewport height, verify that the footer slides up from the bottom and displays the suggested action.
-2. Try to return to the top of the page by clicking the footer, verify that the page scrolls to the top and the footer slides back down.
+1. Try to scroll through a history section which extends at least 500 pixels beyond the viewport height, verify that the footer slides up from the bottom and displays the relevant suggested action.
+2. Try to return to the top of the page by clicking the footer, verify that the page scrolls to the top and the footer slides back down to a hidden position.
 
 In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+
 
 You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
 
@@ -120,13 +113,13 @@ The site is hosted through GitHub pages and is synced to the master branch of th
 This means that the latest push to the master branch will update the live site automatically.       
 
 The process for initial deployment is as follows -      
-On the repository GitHub page, click the settings tab located on the far right of the menu.     
-Scroll down to the section titled GitHub Pages and select "master branch" as the source.        
-The site deploys once a source is selected and a url link is accessible below the GitHib Pages section title.       
+1. On the repository GitHub page, click the settings tab located on the far right of the menu.     
+2. Scroll down to the section titled GitHub Pages and select "master branch" as the source.        
+3. The site deploys once a source is selected and a url link is accessible below the GitHib Pages section title.       
 
 To run the code in this project locally, you can clone the full contents of the repository. In your terminal, 
-navigate to the directory you want the repository located and paste this command:
-
+navigate to the directory you want the repository located and enter the following command:
+ 
     git clone https://github.com/elkrojo/place-in-time.git
 
 Once cloned, you can remove all connection to the source repository using the command:

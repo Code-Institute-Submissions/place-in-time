@@ -33,8 +33,16 @@ body {
     color: var(--second-content-white);
 }
 
+.modal-body {
+    padding-bottom: 0;
+}
+
 .modal-body h6 {
     margin-bottom: 0.8rem;
+}
+
+.modal-footer {
+    padding-top: 0;
 }
 
 .btn-primary {
