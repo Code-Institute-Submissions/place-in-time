@@ -25,7 +25,7 @@ function searchWiki(userLoc) {
         // gscoord: "37.7891838|-122.4033522",
         gscoord: tfUserLoc,
         gsradius: "10000",
-        gslimit: "20",
+        gslimit: "26",
         format: "json"
     };
 
