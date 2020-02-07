@@ -10,15 +10,15 @@ where you are always only a few touches/clicks from a fascinating piece of histo
 
 
 ## Demo
-Clicking on the screen below will bring you to a live demo. Right click and select "Open link in new tab" to open the site in a new browser tab.     
+Clicking on the screen below will bring you to a live demo.     
 
-[![Main_Screen](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/main_screen.png)](https://elkrojo.github.io/place-in-time/)
+<a href="https://elkrojo.github.io/place-in-time/" target="_blank"><img src="https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/main_screen.png"></a>
 
 ## UX
-As a tourist, I would like to learn more about the backstory of my current location and other locations nearby. 
-In doing so, I can place myself in old stories which bridge the gap between past and present and improve my sense of cultural enrichment.       
+As a tourist, I would like to learn more about the backstory of my current location and other locations within reasonable driving distance. 
+In doing so, I can place myself in old stories which bridge the gap between past and present and enhance my sense of cultural enrichment.       
 
-As a native, I would like to gain knowledge on the historical significance of buildings and places in my surroundings, both familiar and unfamiliar. 
+As a native, I would like to gain knowledge on the historical significance of buildings and places in my general area, both familiar and unfamiliar. 
 In doing so, I can develop a deeper understanding of how the native traditions and surroundings were shaped over time.
 
 ### Strategy
@@ -46,28 +46,28 @@ The colour scheme and fonts for the location heading and history section were ch
 
 **Welcome Modal** - presents users with some helpful information and operational instructions before they see the app.      
 
-![Modal](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/modal_hlite.png "Highlighted Modal")
+![Modal](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/modal_hlite.png "Modal")
 
 
 **Google Map** - shows users their current approximate location on the map, following a request from the browser to access their approximate device location.        
 
-![Modal](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/gmap_hlite.png "Highlighted Map")
+![Modal](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/gmap_hlite.png "Map")
 
 
 **Google Map Markers** - shows users the closest places of interest by way of map markers, which when clicked will update the information on the page.      
 
-![Modal](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/gmap_markers_hlite.png "Highlighted Markers")
+![Modal](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/gmap_markers_hlite.png "Map Markers")
 
 
 **Bootstrap Accordion** - allows users to expand the history paragraphs section when tapped, and hide the history again if opted.       
 
-![Modal](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/accordion_cl_hlite.png "Highlighted Accordion Closed")
-![Modal](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/accordion_op_hlite.png "Highlighted Accordion Open")      
+![Modal](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/accordion_cl_hlite.png "Accordion Closed")
+![Modal](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/accordion_op_hlite.png "Accordion Open")      
 
 
 **Responsive Footer** - presents the user with an easy way to return to the top of the page, by appearing after a predefined scroll distance.       
 
-![Modal](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/footer_hlite.png "Highlighted Footer")        
+![Modal](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/footer_hlite.png "Footer")        
 
 
 The functions related to the modal, accordion display message and responsive footer can be found at file path:
@@ -94,7 +94,7 @@ The functions related to the modal, accordion display message and responsive foo
 ## Testing
 The user story scenarios were adressed effectively, where information relative to the selected marker was presented clearly and cleanly. 
 The map section alerts the user to their current location, while providing them with clickable options in the form of map markers. 
-The page elements will resize and refow when the screen size is reduced or increased.        
+The page elements will resize and reflow when the screen size is reduced or increased.        
 
 **Welcome Modal:**
 1. Click on the "Find my location" button and verify that the map updates with markers located nearby.   
