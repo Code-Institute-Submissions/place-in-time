@@ -10,9 +10,9 @@ where you are always only a few touches/clicks from a fascinating piece of histo
 
 
 ## Demo
-Clicking on the screen below will bring you to a live demo.     
+Clicking on the screen below will bring you to a live demo. Right click and select "Open link in new tab" to open the demo in a new browser tab.      
 
-<a href="https://elkrojo.github.io/place-in-time/" onclick="return ! window.open(this.href);"><img src="https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/main_screen.png"></a>
+<a href="https://elkrojo.github.io/place-in-time/" target="_blank"><img src="https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/main_screen.png"></a>
 
 ## UX
 As a tourist, I would like to learn more about the backstory of my current location and other locations within reasonable driving distance. 
