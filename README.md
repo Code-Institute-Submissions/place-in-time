@@ -77,7 +77,9 @@ The functions related to the modal, accordion display message and responsive foo
 ### Features Left to Implement
 **Favorites** - would allow users to store their favorite locations for future reference, by tagging a location using a button located in the information space.     
 
-**Pictures** - would allow the user to preview the location visually, by displaying a selection of images in a carousel styled viewer.        
+**Pictures** - would allow the user to preview the location visually, by displaying a selection of images in a carousel viewer.      
+
+**Language** - would allow users to select a preferred language for page contents, by selecting their language from an options menu.     
 
 ## Technologies Used
 [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - The project uses **JavaScript** to add dynamic functionality to the user experience.
@@ -131,7 +133,9 @@ The site was tested on multiple browsers (Chrome, Firefox, Safari) and on a few 
 **!Known Issues!**      
 
 While testing, I encountered an issue when trying to view the page in Firefox while the developer tools window is open. As a result, none of the dynamic page content is loaded. 
-Closing the developer tools window and refreshing the page causes the page to load as intended. This appears to be a known issue between Firefox developer tools and Google Maps JavaScript API, specifically.
+Closing the developer tools window and refreshing the page causes the page to load as intended. This appears to be a known issue between Firefox developer tools and Google Maps JavaScript API, specifically.      
+
+While testing, users accessing the site through the Chromium browser encountered the same issue outlined above, where the dynamic content was not loaded.
 
 ## Deployment
 
