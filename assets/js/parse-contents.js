@@ -40,7 +40,8 @@ function parseContents() {
                 // Activate accordion button
                 docHistoryHeader.disabled = false;
                 // Display appropriate message depending on current accordion active state
-                $("#collapseOne").hasClass("show") ? docHistoryHeader.innerHTML = hideHistText : docHistoryHeader.innerHTML = showHistText;
+                // $("#collapseOne").hasClass("show") ? docHistoryHeader.innerHTML = hideHistText : docHistoryHeader.innerHTML = showHistText;
+                docHistoryHeader.innerHTML = $("#collapseOne").hasClass("show") ? hideHistText : showHistText;
                 
                 // Target headings and paragraphs within history section
                 var histParObj = $("#History").closest("h2").nextUntil("h2", "h3, p");

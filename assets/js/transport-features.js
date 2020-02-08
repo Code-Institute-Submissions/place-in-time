@@ -8,7 +8,7 @@ $(window).on('load', function() {
 $('#refresh-page').on('click', function (event) {
     event.preventDefault();
     initMap();
-})
+});
 
 // Return to top of page
 $('.scroll-top').on('click', function (event) {

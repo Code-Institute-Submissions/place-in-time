@@ -16,7 +16,7 @@ function initMap() {
         zoom: 13
     });
 
-    infoWindow = new google.maps.InfoWindow;
+    infoWindow = new google.maps.InfoWindow();
 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
@@ -64,10 +64,10 @@ function initMap() {
             marker.addListener("click", function () {
                 clickLat = marker.getPosition().lat();
                 clickLng = marker.getPosition().lng();
-                clickLoc = { lat: clickLat, lng: clickLng }
+                clickLoc = { lat: clickLat, lng: clickLng };
                 searchWiki(clickLoc);
-            })
-        })
+            });
+        });
     }
 }
 
