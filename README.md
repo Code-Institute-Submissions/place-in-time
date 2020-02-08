@@ -77,6 +77,9 @@ The functions related to the modal, accordion display message and responsive foo
     assets/js/transport-features.js
    
 ### Features Left to Implement
+
+**Search** - would allow users to target a specific location, by entering the place name in a search bar.       
+
 **Favorites** - would allow users to store their favorite locations for future reference, by tagging a location using a button located in the information space.     
 
 **Pictures** - would allow the user to preview the location visually, by displaying a selection of images in a carousel viewer.      
