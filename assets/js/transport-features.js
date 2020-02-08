@@ -1,3 +1,4 @@
+
 // Display modal on page load
 $(window).on('load', function() {
     $('#instructModal').modal('show');
