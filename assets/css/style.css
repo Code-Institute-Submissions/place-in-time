@@ -6,7 +6,6 @@
     --mid-grey: #8d8d8d;
     --slate: #464646;
     --ink-print: #212529;
-
 }
 
 body {
@@ -58,9 +57,9 @@ body {
     color: var(--second-content-white);
 }
 
-/* Map */
+/* Upper Section */
 #first-content {
-    padding: 0 -15px 16px 0;
+    padding: 0 -15px 16px 0; /* negative value required to make map occupy entire screen width on mobile */
     margin-bottom: 8px;
     background-color: var(--first-content-white);
 }
@@ -75,8 +74,7 @@ div#map {
     border-bottom: 1px solid var(--mid-grey);
 }
 
-/*  */
-
+/* Lower Section */
 #second-content {
     background-color: var(--first-content-white);
 }
@@ -96,19 +94,7 @@ div#map {
     letter-spacing: 4px;
 }
 
-/* .logo {
-    margin: 8px 0 16px 0;
-    font-family: 'Forum', cursive;
-} */
-
-/* #logo-x {
-    font-family: 'Forum', cursive;
-    text-shadow: 1px 1px 3px #911100;
-} */
-
-
 /* Placename Box */
-
 .current-loc p {
     margin-bottom: -5px;
     padding: 3px 8px;
@@ -130,6 +116,7 @@ div#map {
     padding: 12px 8px;
 }
 
+/* Accordion Contents */
 .extract-main {
     margin-top: 12px;
 }
@@ -149,7 +136,6 @@ div.card {
     padding: 0;
     border: none;
     border-radius: 0;
-    
 }
 
 #headingOne {
@@ -190,6 +176,7 @@ a:hover {
     color: inherit;
 }
 
+/* Footer */
 #footer {
     background-color: var(--ink-print);
     color: var(--first-content-white);
@@ -207,6 +194,7 @@ a:hover {
     padding: 0 10px;
 }
 
+/* Hide raw HTML returned from parseContents */
 #hidden-content {
     display: none;
 }
