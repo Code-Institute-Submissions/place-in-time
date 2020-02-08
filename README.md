@@ -35,8 +35,7 @@ The currently selected location is displayed in an eye catching box in the centr
 when available is accessible through a button prompting the user to interact.
 
 ### Skeleton
-
-Wireframe      
+[Wireframe](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/PiT_wireframe.jpeg)      
 
 ### Surface
 The user interface is centered on the map element, which occupies half of the initial screen height. The map contains colourful points of focus for ease of navigation.
@@ -131,16 +130,18 @@ The page elements will resize and reflow when the screen size is reduced or incr
 
 In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.        
 
-**Browser Compatibility**       
+### Browser Compatibility       
 
 The site was tested on multiple browsers (Chrome, Firefox, Safari) and on a few portable devices (iPhone 5s: Safari, iPad: Safari) to assess compatibility and responsiveness. 
 
 **!Known Issues!**      
 
+Sometimes the map markers are not loaded initially where the browser does not yet have permission to access the device location. Refreshing the page and clicking on the modal button "Find my location" will resolve this issue.       
+
 While testing, I encountered an issue when trying to view the page in Firefox while the developer tools window is open. As a result, none of the dynamic page content is loaded. 
 Closing the developer tools window and refreshing the page causes the page to load as intended. This appears to be a known issue between Firefox developer tools and Google Maps JavaScript API, specifically.      
 
-While testing, users accessing the site through the Chromium browser encountered the same issue outlined above, where the dynamic content was not loaded.
+While testing, users accessing the site via Chromium encountered an issue where the dynamic content was not loaded, and refreshing the page didn't work.
 
 ## Deployment
 
@@ -176,4 +177,4 @@ accessed by using JQuery to target the necessary html elements returned from a c
 
 ### Acknowledgements
 
-- I received inspiration for this project from X
+The regular expressions used to remove some of the html elements in the parseContents function were copied from a post on Stack Overflow which addressed the same specific subject.
