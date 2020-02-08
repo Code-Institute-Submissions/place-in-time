@@ -1,12 +1,5 @@
+
 function parseContents() {
-    /*
-    parse.js
-
-    MediaWiki API Demos
-    Demo of `Parse` module: Parse content of a page
-
-    MIT License
-*/
 
     var url = "https://en.wikipedia.org/w/api.php";
 
@@ -66,7 +59,7 @@ function parseContents() {
                 // Remove citation brackets from the text
                 docHistoryPars.innerHTML = docHistoryPars.innerHTML.replace(/<sup\b[^>]*>(.*?)<\/sup>/gi, "");
                 // Add styling to history sub-headings
-                $("#history-pars").children("h3").addClass("subhead");;
+                $("#history-pars").children("h3").addClass("subhead");
             }
             // Clear out contents of hidden HTML
             docHiddenContent.innerHTML = "";

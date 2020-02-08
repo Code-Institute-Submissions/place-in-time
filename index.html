@@ -5,16 +5,16 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Project 2</title>
+	<title>Place In Time</title>
 
 	<!-- External style libraries -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-            type="text/css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-            type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Forum&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/7f69bba78b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Forum&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7f69bba78b.js" crossorigin="anonymous"></script>
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
             integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
@@ -29,12 +29,11 @@
 	
 	<!-- Local style sheet -->
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css">
-
 </head>
 
 <body>
 
-	<!-- Modal -->
+	<!-- Welcome Modal -->
 	<div class="modal hide fade" id="instructModal" role="dialog" aria-labelledby="instructModalLabel"
 		aria-hidden="true">
 		<div class="modal-dialog" role="document">
@@ -61,47 +60,45 @@
                     </ol>
 				</div>
 				<div class="modal-footer">
-					<!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
 					<button type="button" class="btn btn-primary" id="refresh-page" data-dismiss="modal">Find my location</button>
 				</div>
 			</div>
 		</div>
 	</div>
+    <!-- end of welcome modal -->
 
+    <!-- Map Section -->
 	<section class="container-fluid" id="first-content">
 		<div class="row">
 			<div class="col-md-8 mx-auto">
-				<!-- <div class="text-center">
-					<h1 class="logo slate">ba<span id="logo-x">x</span>tory</h1>
-				</div> -->
 				<div id="map"></div>
-				<!-- <div class="text-center mr-1">
-					<button id="get-locat-btn" class="btn btn-outline-secondary" type="button">Get location</button>
-				</div> -->
-
-
-				<!-- <div id="history-section">
-					<h3 class="slate" id="history-header">History: </h3>
-					<div id="history-pars"></div>
-				</div> -->
-
 			</div>
 		</div>
 	</section>
+    <!-- end of map section -->
 
+    <!-- Content Section -->
 	<section class="container-fluid" id="second-content">
 		<div class="row">
 			<div class="col-md-8 mx-auto">
+
+                <!-- Placename Box -->
 				<div class="current-loc">
 					<p>Place of interest</p>
 				</div>
 				<div class="focus-loc">
 					<h4 id="selected-loc"></h4>
 				</div>
+                <!-- end of placename box -->
+
+                <!-- Overview -->
 				<div class="extract-main">
 					<h3 class="subhead">Overview</h3>
 					<p id="extract-main-par"></p>
 				</div>
+                <!-- end of overview -->
+
+                <!-- History Accordion -->
 				<div class="accordion" id="accordionExample">
 					<div class="card">
 						<div class="card-header" id="headingOne">
@@ -118,31 +115,34 @@
 						</div>
 					</div>
 				</div>
+                <!-- end of history accordion -->
+
+                <!-- Footer -->
 				<footer class="scroll-top" id="footer">
 					<a href="#"
 						id="footer-content"><i class="fas fa-arrow-up"></i><span>Beam me up</span><i class="fas fa-arrow-up"></i></a>
 				</footer>
+                <!-- end of footer -->
+
 			</div>
 		</div>
 	</section>
+    <!-- end of content section -->
 
+    <!-- Hidden Content -->
 	<section id="hidden-content"></section>
 
 	<!-- Local JS -->
-	<script src="assets/js/maps.js" type="text/javascript"></script>
-	<script src="assets/js/parse-contents.js" type="text/javascript"></script>
-	<script src="assets/js/get-summary.js" type="text/javascript"></script>
-	<script src="assets/js/search-wiki.js" type="text/javascript"></script>
-	<script src="assets/js/transport-features.js" type="text/javascript"></script>
+	<script src="assets/js/maps.js"></script>
+	<script src="assets/js/parse-contents.js"></script>
+	<script src="assets/js/get-summary.js"></script>
+	<script src="assets/js/search-wiki.js"></script>
+	<script src="assets/js/transport-features.js"></script>
 
 	<!-- External JS -->
         <!-- Google Maps -->
-        <script
-            src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"
-            type="text/javascript"></script>
-        <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBj6brCUMnH7jQveYciKby_lQ00I9Lo5ro&callback=initMap"
-            type="text/javascript"></script>
+        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBj6brCUMnH7jQveYciKby_lQ00I9Lo5ro&callback=initMap"></script>
         <!-- end of google maps -->
 
 </body>
