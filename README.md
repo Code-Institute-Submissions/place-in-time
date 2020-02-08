@@ -12,7 +12,7 @@ where you are always only a few touches/clicks from a fascinating piece of histo
 ## Demo
 Clicking on the screen below will bring you to a live demo. Right click and select "Open link in new tab" to open the demo in a new browser tab.      
 
-<a href="https://elkrojo.github.io/place-in-time/" target="_blank"><img src="https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/main_screen.png"></a>
+[![Main](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/main_screen.png)](https://elkrojo.github.io/place-in-time/)
 
 ## UX
 As a tourist, I would like to learn more about the backstory of my current location and other locations within reasonable driving distance. 
@@ -20,6 +20,8 @@ In doing so, I can place myself in old stories which bridge the gap between past
 
 As a native, I would like to gain knowledge on the historical significance of buildings and places in my general area, both familiar and unfamiliar. 
 In doing so, I can develop a deeper understanding of how the native traditions and surroundings were shaped over time.
+
+![UX Stories](https://raw.githubusercontent.com/elkrojo/place-in-time/master/assets/images/ux-stroy.gif "UX Stories")
 
 ### Strategy
 The design is intentionally simple and uncluttered. The information takes a position of primary importance, where interactivity options are obvious, intuitive and unobtrusive.
